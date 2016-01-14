@@ -1,0 +1,19 @@
+//
+//  zhilingCodeSM.h
+//  ZiRobot
+//
+//  Created by 阿布都沙拉木吾斯曼 on 15/4/30.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+#import "TreadeInfoSM.h"
+@interface zhilingCodeSM : NSObject<IAnnotatable>
+@property (nonatomic, assign) int msg;
+@property (nonatomic, assign) int type;
+@property (nonatomic, assign) int status;
+@property (strong, nonatomic) TreadeInfoSM*data;
+@property (strong, nonatomic) NSArray*data1;
+@property (strong, nonatomic) NSArray*data2;
+@end

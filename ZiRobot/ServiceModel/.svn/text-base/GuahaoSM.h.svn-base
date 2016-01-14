@@ -1,0 +1,28 @@
+//
+//  GuahaoSM.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/5/8.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface GuahaoSM : NSObject<IAnnotatable>
+
+@property (nonatomic, strong) NSArray *data;
+
+@end
+
+@interface GuahaoDataSM : NSObject<IAnnotatable>
+@property (nonatomic, strong) NSString *imgurl;
+@property (nonatomic, strong) NSString *memo;
+@property (nonatomic, strong) NSString *extlinkid;
+@property (nonatomic, strong) NSString *extlinkurl;
+@property (nonatomic, strong) NSString *extlinkname;
+@property (nonatomic) int deleteflag;
+@property (nonatomic) int type;
+@property (nonatomic, strong) NSString *createtime;
+@property (nonatomic, strong) NSString *createid;
+
+@end

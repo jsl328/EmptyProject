@@ -1,0 +1,24 @@
+//
+//  CreateYesTreadeInfoSM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-21.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "CreateYesTreadeInfoSM.h"
+
+@implementation CreateYesTreadeInfoSM
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+	DCField(ap, @"purchaseuserid", @"purchaseuserid");
+	DCField(ap, @"receivename", @"receivename");
+	DCField(ap, @"receivemobile", @"receivemobile");
+	DCField(ap, @"receiveaddress", @"receiveaddress");
+	DCField(ap, @"productid", @"productid");
+	DCField(ap, @"name", @"name");
+	DCField(ap, @"productcount", @"productcount");
+	DCField(ap, @"comment", @"comment");
+	DCField(ap, @"orderID", @"orderid");
+}
+@end

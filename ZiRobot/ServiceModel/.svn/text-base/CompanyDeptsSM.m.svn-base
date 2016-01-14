@@ -1,0 +1,42 @@
+//
+//  CompanyDeptsSM.m
+//  Lvpingguo
+//
+//  Created by fuyonghua on 14-9-2.
+//  Copyright (c) 2014年 fuyonghua. All rights reserved.
+//
+
+#import "CompanyDeptsSM.h"
+#import "CompanyPersonsSM.h"
+#import "DeptPersonsSM.h"
+@implementation CompanyDeptsSM
+@synthesize _id;
+@synthesize name;
+@synthesize isleaf;
+@synthesize parid;
+@synthesize memo;
+@synthesize companyid;
+@synthesize sort;
+@synthesize subdepts;
+@synthesize users;
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+    DCField(ap, @"name", @"name");
+    DCField(ap, @"isleaf", @"isleaf");
+    DCField(ap, @"parid", @"parid");
+    DCField(ap, @"memo", @"memo");
+    DCField(ap, @"companyid", @"companyid");
+    DCField(ap, @"sort", @"sort");
+    DCField(ap, @"subdepts", @"subdepts");
+    DCListField(ap, @"users", @"users", [DeptPersonsSM class]);
+}
+@end
+
+@implementation CompanyNamesSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+
+}
+@end
+

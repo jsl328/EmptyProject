@@ -1,0 +1,19 @@
+//
+//  ChenjiRenPeopleSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-14.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface ChenjiRenPeopleSM : NSObject<IAnnotatable>
+@property (nonatomic,strong)NSString* _id;
+@property (nonatomic,strong)NSString* orderId;
+@property (nonatomic,strong)NSString* psgName;
+@property (nonatomic,assign)int psgType;
+@property (nonatomic,assign)int idType;
+@property (nonatomic,strong)NSString* idNo;
+@property (nonatomic,strong)NSString* birthday;
+@end

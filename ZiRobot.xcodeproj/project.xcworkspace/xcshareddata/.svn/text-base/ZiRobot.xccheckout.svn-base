@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>09879ECD-C233-499D-9E0D-F7E3250DC9F0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ZiRobot</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1A4FF764-9CBC-4A38-86C3-C89A14C19933</key>
+		<string>svn://114.112.98.143/svnroot/IOS_Project/ZiRobot</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ZiRobot.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1A4FF764-9CBC-4A38-86C3-C89A14C19933</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>1A4FF764-9CBC-4A38-86C3-C89A14C19933</key>
+		<string>svn://114.112.98.143</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://114.112.98.143/svnroot/IOS_Project/ZiRobot/ZiRobot.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1A4FF764-9CBC-4A38-86C3-C89A14C19933</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1A4FF764-9CBC-4A38-86C3-C89A14C19933</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZiRobot</string>
+		</dict>
+	</array>
+</dict>
+</plist>

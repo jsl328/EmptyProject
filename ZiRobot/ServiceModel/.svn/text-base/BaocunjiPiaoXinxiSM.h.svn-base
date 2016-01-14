@@ -1,0 +1,34 @@
+//
+//  BaocunjiPiaoXinxiSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-14.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface BaocunjiPiaoXinxiSM : NSObject<IAnnotatable>
+@property (nonatomic,strong)NSString *id;
+@property (nonatomic,strong)NSString *ordertype;
+@property (nonatomic,strong)NSString *orderno;
+@property (nonatomic,strong)NSString *linkpersonname;
+@property (nonatomic,strong)NSString *linkphone;
+@property (nonatomic,strong)NSString *payment;
+@property (nonatomic,strong)NSString *payername;
+@property (nonatomic,strong)NSString *payerid;
+@property (nonatomic,assign)int paytype;
+@property (nonatomic,strong)NSString *deadpayline;
+@property (nonatomic,strong)NSString *status;
+@property (nonatomic,strong)NSString *memo;
+@property (nonatomic,assign)int dispatch;
+@property (nonatomic,strong)NSString *address;
+@property (nonatomic,strong)NSString *createid;
+@property (nonatomic,strong)NSString *createname;
+@property (nonatomic,strong)NSString *createtime;
+@property (nonatomic,assign)int safecount;
+@property (nonatomic,assign)int safeamount;
+@property (nonatomic,strong)NSArray *childFare;
+@property (nonatomic, strong) NSString *from;
+@property (nonatomic, strong) NSString *to;
+@end

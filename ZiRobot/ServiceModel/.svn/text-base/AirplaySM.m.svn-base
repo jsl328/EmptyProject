@@ -1,0 +1,24 @@
+//
+//  AirplaySM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-8.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "AirplaySM.h"
+
+@implementation AirplaySM
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+	DCField(ap, @"departureTime", @"departureTime");
+	DCField(ap, @"arrivalTime", @"arrivalTime");
+	DCField(ap, @"cabinType", @"cabinType");
+	DCField(ap, @"startAirPortName", @"startAirPortName");
+	DCField(ap, @"endAirPortName", @"endAirPortName");
+	DCField(ap, @"startAir", @"startAir");
+	DCField(ap, @"airlinename", @"airlinename");
+	DCField(ap, @"planeType", @"planeType");
+	DCField(ap, @"fullPrice", @"fullPrice");
+}
+@end

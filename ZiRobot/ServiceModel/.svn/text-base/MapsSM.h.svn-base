@@ -1,0 +1,18 @@
+//
+//  MapsSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface MapsSM : NSObject<IAnnotatable>
+@property (assign, nonatomic) NSString* chname;
+@property (assign, nonatomic) NSString* flowid;
+@property (assign, nonatomic) int sort;
+@property (assign, nonatomic) int type;
+@property (assign, nonatomic) NSString* strs;
+
+@end

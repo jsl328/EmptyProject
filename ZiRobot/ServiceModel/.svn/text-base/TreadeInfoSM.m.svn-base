@@ -1,0 +1,32 @@
+//
+//  TreadeInfoSM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "TreadeInfoSM.h"
+
+@implementation TreadeInfoSM
+
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+	DCField(ap, @"productid", @"productid");
+	DCField(ap, @"type_id", @"typeid");
+	DCField(ap, @"typecode", @"typecode");
+	DCField(ap, @"type_name", @"typename");
+	DCField(ap, @"name", @"name");
+	DCField(ap, @"iconurl", @"iconurl");
+	DCField(ap, @"price", @"price");
+	DCField(ap, @"unitname", @"unitname");
+	DCField(ap, @"currency", @"currency");
+	DCField(ap, @"createtime", @"createtime");
+	DCField(ap, @"updatetime", @"updatetime");
+	DCField(ap, @"deleteflag", @"deleteflag");
+	DCField(ap, @"productcount", @"productcount");
+	DCField(ap, @"comment", @"comment");
+	DCField(ap, @"phone", @"phone");
+	DCField(ap, @"addres", @"addres");
+}
+@end

@@ -1,0 +1,47 @@
+//
+//  ResultOfCreateservice.m
+//  ZiRobot
+//
+//  Created by 阿布都沙拉木吾斯曼 on 15/4/23.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "ResultOfCreateservice.h"
+@class ResultOfCreateserviceData1SM;
+
+@implementation ResultOfCreateservice
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"msg", @"msg");
+    DCListField(ap, @"data", @"data", [ResultOfCreateserviceDataSM class]);
+    DCListField(ap, @"data1", @"data1", [ResultOfCreateserviceData1SM class]);
+    DCListField(ap, @"data2", @"data", [ResultOfCreateserviceData1SM class]);
+}
+
+@end
+
+@implementation ResultOfCreateserviceDataSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+}
+
+@end
+
+@class ListvcmoneySM;
+@implementation ResultOfCreateserviceData1SM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    
+    DCListField(ap, @"listvcmoney", @"listvcmoney", [ListvcmoneySM class]);
+}
+
+@end
+
+@implementation ListvcmoneySM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"typename1", @"typename");
+}
+
+@end

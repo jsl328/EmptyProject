@@ -1,0 +1,16 @@
+//
+//  KaYueSM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-16.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "KaYueSM.h"
+
+@implementation KaYueSM
+-(void)provideAnnotations:(AnnotationProvider *)ap{
+
+	DCListField(ap, @"data", @"data", [SingleOrCompanyYueSM class]);
+}
+@end

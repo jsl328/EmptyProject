@@ -1,0 +1,15 @@
+//
+//  ResultsOfChuxuKayueModel.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-15.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface ResultsOfChuxuKayueModel : NSObject<IAnnotatable>
+@property (nonatomic,assign)int  status;
+@property (nonatomic,strong)NSString  *title;
+@property (nonatomic,strong)NSArray  *data;
+@end

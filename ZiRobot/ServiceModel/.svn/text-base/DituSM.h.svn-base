@@ -1,0 +1,37 @@
+//
+//  DituSM.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/5/23.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@class DituDataSM;
+@interface DituSM : NSObject<IAnnotatable>
+
+@property (nonatomic, assign) int status;
+
+@property (nonatomic, assign) int type;
+
+@property (nonatomic, strong) DituDataSM *data;
+
+@end
+
+@interface DituDataSM : NSObject<IAnnotatable>
+
+@property (nonatomic, strong) NSString *startCity;
+
+@property (nonatomic, strong) NSString *startLoc;
+
+@property (nonatomic, strong) NSString *endCity;
+
+@property (nonatomic, strong) NSString *endLoc;
+
+@property (nonatomic, strong) NSString *poi;
+
+@property (nonatomic, assign) int type;
+
+@property (nonatomic, assign) int chuxingType;
+@end

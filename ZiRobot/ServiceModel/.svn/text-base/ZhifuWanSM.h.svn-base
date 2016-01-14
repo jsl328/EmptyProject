@@ -1,0 +1,37 @@
+//
+//  ZhifuWanSM.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/5/10.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@class ZhifuWanDataSM;
+@interface ZhifuWanSM : NSObject<IAnnotatable>
+
+@property (nonatomic) int status;
+
+@property (nonatomic, strong)ZhifuWanDataSM *data;
+
+@end
+
+@interface ZhifuWanDataSM : NSObject<IAnnotatable>
+
+@property (nonatomic, strong) NSString * opid;
+@property (nonatomic, strong) NSString * productid;
+@property (nonatomic, strong) NSString * orderno;
+@property (nonatomic, strong) NSString * productname;
+@property (nonatomic, strong) NSString * iconurl;
+@property (nonatomic) int price;
+@property (nonatomic) int productcount;
+@property (nonatomic) int summoney;
+@property (nonatomic, strong) NSString * comment;
+@property (nonatomic, strong) NSString * property;
+@property (nonatomic, strong) NSString * createtime;
+@property (nonatomic) int deleteflag;
+@property (nonatomic) int status;
+@property (nonatomic, strong) NSString * statusValue;
+
+@end

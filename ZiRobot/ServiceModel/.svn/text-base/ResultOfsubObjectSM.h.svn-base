@@ -1,0 +1,19 @@
+//
+//  ResultOfsubObjectSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-15.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface ResultOfsubObjectSM : NSObject<IAnnotatable>
+@property (nonatomic,strong)NSString  *valuecardid;
+@property (nonatomic,strong)NSString  *userid;
+@property (nonatomic,assign)int  valuecardtype;
+@property (nonatomic,strong)NSString  *valuecardname;
+@property (nonatomic,assign)int  deleteflag;
+@property (nonatomic,strong)NSString  *createtime;
+@property (nonatomic,strong)NSArray  *listvcmoney;
+@end

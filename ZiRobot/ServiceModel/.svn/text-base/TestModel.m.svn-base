@@ -1,0 +1,42 @@
+//
+//  TestModel.m
+//  ZiRobot
+//
+//  Created by HeHe丶 on 15/4/23.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "TestModel.h"
+
+@implementation TestModel
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"data", @"data", [TestModel2 class]);
+}
+
+@end
+
+@implementation TestModel2
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"ID", @"id");
+	DCField(ap, @"name", @"name");
+	DCField(ap, @"infoDescription", @"description");
+	DCField(ap, @"createtime", @"createtime");
+	DCField(ap, @"createid", @"createid");
+    DCListField(ap, @"flowitemList", @"flowitemList", [TestModel3 class]);
+}
+
+
+
+@end
+
+@implementation TestModel3
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"ID", @"id");
+	DCField(ap, @"flowid", @"flowid");
+	DCField(ap, @"chname", @"chname");
+	DCField(ap, @"type", @"type");
+	DCField(ap, @"strs", @"strs");
+}
+
+
+@end

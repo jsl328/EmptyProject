@@ -1,0 +1,17 @@
+//
+//  EditGetCodeSM.m
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/6/15.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "EditGetCodeSM.h"
+
+@implementation EditGetCodeSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    
+}
+
+@end

@@ -1,0 +1,23 @@
+//
+//  AirplaySM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-8.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface AirplaySM : NSObject<IAnnotatable>
+
+@property (nonatomic,strong)NSString *departureTime;//起飞时间[datatime]
+@property (nonatomic,strong)NSString *arrivalTime;	//到达时间[datatime]
+@property (nonatomic,strong)NSString *cabinType;	//仓位类型[string]
+@property (nonatomic,strong)NSString *startAirPortName;//起飞机场[string]
+@property (nonatomic,strong)NSString *endAirPortName; //到达机场[string]
+@property (nonatomic,strong)NSString *startAir; //起飞机场航站楼[string]
+@property (nonatomic,strong)NSString *airlinename;//航空公司[string]
+@property (nonatomic,strong)NSString *planeType;//飞机型号[string]
+@property (nonatomic,strong)NSString *fullPrice;//机票价格[string]
+
+@end

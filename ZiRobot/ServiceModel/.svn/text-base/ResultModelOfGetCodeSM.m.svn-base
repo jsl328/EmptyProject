@@ -1,0 +1,26 @@
+//
+//  ResultModelOfGetCodeSM.m
+//  Lvpingguo
+//
+//  Created by fuyonghua on 14-9-16.
+//  Copyright (c) 2014年 fuyonghua. All rights reserved.
+//
+
+#import "ResultModelOfGetCodeSM.h"
+
+@implementation ResultModelOfGetCodeSM
+@synthesize status;
+@synthesize msg;
+@synthesize data;
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+	
+    DCField(ap, @"status", @"status");
+    DCField(ap, @"msg", @"msg");
+    DCListField(ap, @"data", @"data", [ListvcmoneySM class]);
+	DCField(ap, @"data1", @"data1");
+	DCField(ap, @"SaveActiondata", @"data1");
+	DCField(ap, @"data2", @"data2");
+	DCListField(ap, @"data3", @"data", [SingleOrCompanyYueSM class]);
+}
+@end

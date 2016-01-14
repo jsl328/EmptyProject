@@ -1,0 +1,17 @@
+//
+//  SingleOrCompanyYueSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-15.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface SingleOrCompanyYueSM : NSObject<IAnnotatable>
+@property (nonatomic,strong)NSString *vcmoneyid;
+@property (nonatomic,strong)NSString *valuecardid;
+@property (nonatomic,assign)int vcmoneytype;
+@property (nonatomic,assign)int vcmoney;
+@property (nonatomic,strong)NSString *_typename;
+@end

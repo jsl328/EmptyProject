@@ -1,0 +1,16 @@
+//
+//  huoquLishiChenjiRenSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-14.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+//获取历史乘机人
+@interface huoquLishiChenjiRenSM : NSObject<IAnnotatable>
+
+@property (nonatomic,strong) NSString *createid;
+
+@end

@@ -1,0 +1,101 @@
+//
+//  ResultModelOfDetailSM.m
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/4/21.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "ResultModelOfDetailSM.h"
+@class ResultModelOfData1SM;
+@class ResultModelOfFoodData1SM;
+@implementation ResultModelOfDetailSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"data", @"data", [ResultModelOfData1SM class]);
+    DCListField(ap, @"data1", @"data1", [ResultModelOfData1SM class]);
+    DCListField(ap, @"foodS", @"data1", [ResultModelOfFoodData1SM class]);
+}
+
+@end
+@class ResultModelOfApplySM;
+@class ResultModelOfApplyextsSM;
+@class ResultModelOfApplyrecordsSM;
+@implementation ResultModelOfDataSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"apply", @"apply", [ResultModelOfApplySM class]);
+    DCListField(ap, @"applyexts", @"applyexts", [ResultModelOfApplyextsSM class]);
+     DCListField(ap, @"applyrecords", @"applyrecords", [ResultModelOfApplyrecordsSM class]);
+}
+
+@end
+
+@implementation ResultModelOfApplySM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+}
+
+@end
+
+@implementation ResultModelOfApplyextsSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+}
+
+@end
+
+@implementation ResultModelOfApplyrecordsSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+}
+
+@end
+@class ResultModelOfProductSM;
+@class ResultModelOfOrderSM;
+@class ResultModelOfT_OrderSM;
+@implementation ResultModelOfData1SM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"product", @"product", [ResultModelOfProductSM class]);
+    DCListField(ap, @"order", @"order", [ResultModelOfOrderSM class]);
+     DCListField(ap, @"t_order", @"t_order", [ResultModelOfT_OrderSM class]);
+}
+
+@end
+
+@implementation ResultModelOfProductSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    
+}
+
+@end
+
+@implementation ResultModelOfOrderSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    
+    DCField(ap, @"orderid", @"orderid");
+}
+
+@end
+
+@implementation ResultModelOfT_OrderSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    
+}
+
+@end
+
+@implementation ResultModelOfFoodData1SM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    
+}
+
+@end

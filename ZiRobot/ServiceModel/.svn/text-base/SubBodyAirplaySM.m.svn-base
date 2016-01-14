@@ -1,0 +1,24 @@
+//
+//  SubBodyAirplaySM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-8.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "SubBodyAirplaySM.h"
+
+@implementation SubBodyAirplaySM
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+	DCField(ap, @"cabinCode", @"cabinCode");
+	DCField(ap, @"remainingSeatNumber", @"remainingSeatNumber");
+	DCField(ap, @"discount", @"discount");
+	DCField(ap, @"currency", @"currency");
+	DCField(ap, @"singlePrice", @"singlePrice");
+	DCField(ap, @"cabinSource", @"cabinSource");
+	DCField(ap, @"cabinType", @"cabinType");
+	DCField(ap, @"refundEndorseCode", @"refundEndorseCode");
+	DCField(ap, @"sOfferBenCabin", @"sOfferBenCabin");
+}
+@end

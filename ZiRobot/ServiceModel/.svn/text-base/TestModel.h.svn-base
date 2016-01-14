@@ -1,0 +1,47 @@
+//
+//  TestModel.h
+//  ZiRobot
+//
+//  Created by HeHe丶 on 15/4/23.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+
+@interface TestModel3 : NSObject<IAnnotatable>
+@property (nonatomic,retain) NSString *ID;
+@property (nonatomic,retain) NSString *flowid;
+@property (nonatomic,retain) NSString *chname;
+@property (nonatomic,assign) int type;
+@property (nonatomic,retain) NSString *strs;
+
+
+@end
+
+
+@interface TestModel2 : NSObject<IAnnotatable>
+
+@property (nonatomic,retain) NSString *ID;
+@property (nonatomic,retain) NSString *name;
+@property (nonatomic,retain) NSString *infoDescription;
+@property (nonatomic,assign) int createtime;
+@property (nonatomic,strong) NSString *createid;
+@property (nonatomic,retain) NSArray *flowitemList;
+
+
+
+@end
+
+@interface TestModel : NSObject<IAnnotatable>
+
+@property (nonatomic,assign) int status;
+@property (nonatomic,assign) int type;
+@property (nonatomic,retain) NSString *title;
+@property (nonatomic,retain) NSString *msg;
+@property (nonatomic,retain) NSString *data1;
+@property (nonatomic,retain) NSString *data2;
+@property (nonatomic,retain) NSArray *data;
+
+
+@end

@@ -1,0 +1,19 @@
+//
+//  StoresAirPlayXinxiSM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-13.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "StoresAirPlayXinxiSM.h"
+
+@implementation StoresAirPlayXinxiSM
+//-(void)provideAnnotations:(AnnotationProvider *)ap
+//{
+//	DCField(ap, @"orderId", @"orderId");
+//	DCField(ap, @"departure", @"departure");
+//	DCField(ap, @"arrival", @"arrival");
+//	DCListField(ap, @"cabinItems", @"cabinItems", [SubBodyAirplaySM class]);
+//}
+@end

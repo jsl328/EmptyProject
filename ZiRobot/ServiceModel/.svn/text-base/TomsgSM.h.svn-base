@@ -1,0 +1,28 @@
+//
+//  TomsgSM.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/4/29.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface TomsgSM : NSObject<IAnnotatable>
+
+@property (nonatomic, strong) NSString *from;
+
+@property (nonatomic, strong) NSString *to;
+
+@property (nonatomic) int type;
+
+@property (nonatomic, strong) NSString *msg;
+
+@property (nonatomic, strong) NSString *_id;
+
+@property (nonatomic, strong) NSString *sessionid;
+@property (nonatomic, strong) NSString *longitude;
+
+@property (nonatomic, strong) NSString *latitude;
+
+@end

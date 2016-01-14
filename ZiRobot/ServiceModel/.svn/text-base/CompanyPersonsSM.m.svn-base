@@ -1,0 +1,16 @@
+//
+//  CompanyPersonsSM.m
+//  Lvpingguo
+//
+//  Created by fuyonghua on 14-9-3.
+//  Copyright (c) 2014年 fuyonghua. All rights reserved.
+//
+
+#import "CompanyPersonsSM.h"
+
+@implementation CompanyPersonsSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+
+}
+@end

@@ -1,0 +1,16 @@
+//
+//  BaocunjiPiaoXinxiSM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-14.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "BaocunjiPiaoXinxiSM.h"
+
+@implementation BaocunjiPiaoXinxiSM
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+	
+}
+@end

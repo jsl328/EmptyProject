@@ -1,0 +1,24 @@
+//
+//  SubBodyAirplaySM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-8.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface SubBodyAirplaySM : NSObject<IAnnotatable>
+
+@property (nonatomic,strong)NSString *cabinCode;
+@property (nonatomic,strong)NSString *remainingSeatNumber;
+@property (nonatomic,strong)NSString *discount;
+@property (nonatomic,strong)NSString *benCabin;
+@property (nonatomic,strong)NSString *currency;
+@property (nonatomic,assign)float singlePrice;
+@property (nonatomic,strong)NSString *cabinSource;
+@property (nonatomic,strong)NSString *cabinType;
+@property (nonatomic,strong)NSString *refundEndorseCode;
+@property (nonatomic,strong)NSString *sOfferBenCabin;
+
+@end

@@ -1,0 +1,43 @@
+//
+//  YonghuItemSM.h
+//  Nanumanga
+//
+//  Created by r1 on 2014-6-20
+//  Copyright (c) 2014 r1. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+
+@interface YonghuItemSM : NSObject <IAnnotatable>
+@property (retain, nonatomic) NSString *_id;
+@property (retain, nonatomic) NSString *name;
+@property (retain, nonatomic) NSString *letter;
+@property (retain, nonatomic) NSString *password;
+@property (retain, nonatomic) NSString *token;
+@property (retain, nonatomic) NSString *email;
+@property (retain, nonatomic) NSString *phone;
+@property (retain, nonatomic) NSString *wechat;
+@property (retain, nonatomic) NSString *qq;
+@property (retain, nonatomic) NSString *birthday;
+@property (retain, nonatomic) NSString *constellation;
+@property (retain, nonatomic) NSString *hobby;
+@property (retain, nonatomic) NSString *imgurl;
+@property (retain, nonatomic) NSString *fontsize;
+@property (retain, nonatomic) NSString *companyid;
+@property (retain, nonatomic) NSString *sessionid;
+@property (retain, nonatomic) NSString *position;
+@property (retain, nonatomic) NSString *deleteflag;
+@property (retain, nonatomic) NSString *status;
+@property (retain, nonatomic) NSString *jobnumber;
+@property (nonatomic) BOOL isregisterdata;
+@property (retain, nonatomic) NSString *createtime;
+@property (retain, nonatomic) NSString *deptid;
+@property (retain, nonatomic) NSString *deptname;
+@property (retain, nonatomic) NSString *loginid;
+@property (retain, nonatomic) NSString *callcenterid;
+@property (retain, nonatomic) NSString *backgroundimg;
+@property (nonatomic, strong) NSString *idcard;
+@property (nonatomic, assign) int isPayPassword;
+@property (nonatomic, assign) int gender;
+@end

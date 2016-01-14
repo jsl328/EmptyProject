@@ -1,0 +1,73 @@
+//
+//  ResultMode.m
+//  Lvpingguo
+//
+//  Created by fuyonghua on 14-9-21.
+//  Copyright (c) 2014年 fuyonghua. All rights reserved.
+//
+
+#import "ResultMode.h"
+
+@implementation groupInfo
+
+@synthesize result;
+@synthesize infogroups;
+
+-(void)provideAnnotations:(AnnotationProvider *)ap{
+    
+	DCField(ap, @"result", @"result");
+	DCField(ap, @"infogroups", @"infogroups");
+}
+
+@end
+
+@implementation huanXinToken
+
+@synthesize token;
+
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+	DCField(ap, @"token", @"token");
+}
+
+@end
+
+
+@implementation ResultMode
+@synthesize status;
+@synthesize msg,ID, data,flowid,flowname,dealid,createid,createname,companyid,callcenterid;
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"status", @"status");
+    DCField(ap, @"msg", @"msg");
+    DCListField(ap, @"data", @"data", [MemoContentSM class]);
+    DCListField(ap, @"data1", @"data", [ResultData class]);
+    DCListField(ap, @"data2", @"data", [AddData class]);
+    DCListField(ap, @"data3", @"data", [TreadeYesApplicationSM class]);
+    DCField(ap, @"data", @"data");
+    DCField(ap, @"ID", @"ID");
+    DCField(ap, @"flowid", @"flowid");
+    DCField(ap, @"flowname", @"flowname");
+    DCField(ap, @"dealid", @"dealid");
+    DCField(ap, @"createid", @"createid");
+    DCField(ap, @"createname", @"createname");
+    DCField(ap, @"companyid", @"companyid");
+    DCField(ap, @"callcenterid", @"callcenterid");
+}
+@end
+
+@implementation ResultData
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"ID", @"id");
+    
+}
+@end
+
+@implementation AddData
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"ID", @"id");
+    
+}
+@end

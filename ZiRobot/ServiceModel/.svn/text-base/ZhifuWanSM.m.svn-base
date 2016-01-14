@@ -1,0 +1,25 @@
+//
+//  ZhifuWanSM.m
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/5/10.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "ZhifuWanSM.h"
+
+@implementation ZhifuWanSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"data", @"data", [ZhifuWanDataSM class]);
+}
+
+@end
+
+@implementation ZhifuWanDataSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+   
+}
+
+@end

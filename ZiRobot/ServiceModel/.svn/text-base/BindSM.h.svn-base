@@ -1,0 +1,54 @@
+//
+//  BindSM.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/7/3.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@class BindDataSM;
+@interface BindSM : NSObject<IAnnotatable>
+@property (nonatomic, assign) int status;
+@property (nonatomic, assign) int type;
+@property (nonatomic, strong) NSString *msg;
+@property (nonatomic, strong) BindDataSM *data;
+
+@end
+
+@interface BindDataSM : NSObject<IAnnotatable>
+@property (nonatomic, strong) NSString *starttime;
+@property (nonatomic, strong) NSString *endtime;
+@property (nonatomic, strong) NSString *serchname;
+@property (retain, nonatomic) NSString *_id;
+@property (retain, nonatomic) NSString *name;
+@property (retain, nonatomic) NSString *letter;
+@property (retain, nonatomic) NSString *password;
+@property (retain, nonatomic) NSString *token;
+@property (retain, nonatomic) NSString *email;
+@property (retain, nonatomic) NSString *phone;
+@property (retain, nonatomic) NSString *wechat;
+@property (retain, nonatomic) NSString *qq;
+@property (retain, nonatomic) NSString *birthday;
+@property (retain, nonatomic) NSString *constellation;
+@property (retain, nonatomic) NSString *hobby;
+@property (retain, nonatomic) NSString *imgurl;
+@property (retain, nonatomic) NSString *fontsize;
+@property (retain, nonatomic) NSString *companyid;
+@property (retain, nonatomic) NSString *sessionid;
+@property (retain, nonatomic) NSString *position;
+@property (retain, nonatomic) NSString *deleteflag;
+@property (retain, nonatomic) NSString *status;
+@property (retain, nonatomic) NSString *jobnumber;
+@property (nonatomic) BOOL isregisterdata;
+@property (retain, nonatomic) NSString *createtime;
+@property (retain, nonatomic) NSString *deptid;
+@property (retain, nonatomic) NSString *deptname;
+@property (retain, nonatomic) NSString *loginid;
+@property (retain, nonatomic) NSString *callcenterid;
+@property (retain, nonatomic) NSString *backgroundimg;
+@property (nonatomic, strong) NSString *idcard;
+@property (nonatomic, assign) int isPayPassword;
+@property (nonatomic, assign) int gender;
+@end

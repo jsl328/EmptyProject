@@ -1,0 +1,29 @@
+//
+//  ResultModelOfMyOrderSM.m
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/4/21.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "ResultModelOfMyOrderSM.h"
+@class ResultModelOfMyOrderDataSM;
+@class ResultModelOfMyOrderData1SM;
+@implementation ResultModelOfMyOrderSM
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"data", @"data", [ResultModelOfMyOrderDataSM class]);
+    DCListField(ap, @"data1", @"data1", [ResultModelOfMyOrderData1SM class]);
+}
+@end
+
+@implementation ResultModelOfMyOrderDataSM
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+}
+@end
+
+@implementation ResultModelOfMyOrderData1SM
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+}
+@end

@@ -1,0 +1,41 @@
+//
+//  ZhifuKongjianSM.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/6/13.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@class ZhifuKongjianDataSM;
+@interface ZhifuKongjianSM : NSObject<IAnnotatable>
+
+@property (nonatomic, assign) int status;
+
+@property (nonatomic, assign) int type;
+
+@property (nonatomic, strong) ZhifuKongjianDataSM *data;
+
+@end
+
+@interface ZhifuKongjianDataSM : NSObject<IAnnotatable>
+@property (nonatomic, strong) NSString *starttime;
+@property (nonatomic, strong) NSString *endtime;
+@property (nonatomic, strong) NSString *_id;
+@property (nonatomic, strong) NSString *orderid;
+@property (nonatomic, strong) NSString *ordertype;
+@property (nonatomic, assign) int status;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *icon;
+@property (nonatomic, strong) NSString *createtime;
+@property (nonatomic, strong) NSString *orderproperty;
+@property (nonatomic, strong) NSString *orderpropertytwo;
+@property (nonatomic, strong) NSString *orderuserid;
+@property (nonatomic, strong) NSString *ordercreateid;
+@property (nonatomic, assign) int deleteflag;
+@property (nonatomic, strong) NSString *statusValue;
+@property (nonatomic, assign) float orderprice;
+@property (nonatomic, strong) NSString *from;
+@property (nonatomic, strong) NSString *to;
+@end

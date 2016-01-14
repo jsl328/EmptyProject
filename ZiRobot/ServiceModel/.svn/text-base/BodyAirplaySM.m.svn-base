@@ -1,0 +1,38 @@
+//
+//  BodyAirplaySM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-8.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "BodyAirplaySM.h"
+#import "SubBodyAirplaySM.h"
+
+@implementation BodyAirplaySM
+
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+	DCListField(ap, @"cabinItems", @"cabinItems",[SubBodyAirplaySM class]);
+	DCField(ap, @"airline", @"airline");
+	DCField(ap, @"flightNo", @"flightNo");
+	DCField(ap, @"startAirPort", @"startAirPort");
+	DCField(ap, @"departureTime", @"departureTime");
+	DCField(ap, @"endAirPort", @"endAirPort");
+	DCField(ap, @"arrivalTime", @"arrivalTime");
+	DCField(ap, @"stopNo", @"stopNo");
+	DCField(ap, @"isFood", @"isFood");
+	DCField(ap, @"isCodeShare", @"isCodeShare");
+	DCField(ap, @"planeType", @"planeType");
+	DCField(ap, @"fullPrice", @"fullPrice");
+	DCField(ap, @"punctualityRate", @"punctualityRate");
+	DCField(ap, @"startAir", @"startAir");
+	DCField(ap, @"endAir", @"endAir");
+	
+	DCField(ap, @"isSale", @"isSale");
+	DCField(ap, @"airportTax", @"airportTax");
+	DCField(ap, @"fuelTax", @"fuelTax");
+	DCField(ap, @"shareFlightNo", @"shareFlightNo");
+	DCField(ap, @"enfantPrice", @"enfantPrice");
+}
+@end

@@ -1,0 +1,19 @@
+//
+//  ResultModelOfIListOfYonghuItemSM.h
+//  Lvxinqing
+//
+//  Created by Galathea on 2014-7-21
+//  Copyright (c) 2014 Galathea. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+#import "YonghuItemSM.h"
+#import "CompanyDeptsSM.h"
+@interface ResultModelOfIListOfYonghuItemSM : NSObject <IAnnotatable>
+@property (retain, nonatomic) NSArray *data1;
+@property (retain, nonatomic) YonghuItemSM* data;
+@property (nonatomic) int status;
+@property (nonatomic) int type;
+@property (nonatomic, retain) NSString *msg;
+@end

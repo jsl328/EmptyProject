@@ -1,0 +1,25 @@
+//
+//  DituSM.m
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/5/23.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "DituSM.h"
+
+@implementation DituSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"data", @"data", [DituDataSM class]);
+}
+
+@end
+
+@implementation DituDataSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    
+}
+
+@end

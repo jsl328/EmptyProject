@@ -1,0 +1,83 @@
+//
+//  Lvpingguo.h
+//  Lvpingguo
+//
+//  Created by fuyonghua on 14-8-4.
+//  Copyright (c) 2014年 fuyonghua. All rights reserved.
+//
+
+#ifndef Lvpingguo_Lvpingguo_h
+#define Lvpingguo_Lvpingguo_h
+
+typedef enum {
+    AliPaySuccess = 9000, //9000 订单支付成功
+    AliPayIsDealing = 8000, //8000 正在处理中
+    AliPayFaild = 4000, //4000 订单支付失败
+    AliPayCancel = 6001, //6001 用户中途取消
+    AliPayNetDisconected = 6002, //6002 网络连接出错
+}AliPayReturnState;
+
+#define IOSDEVICE ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+
+#define MAPKIT @"9flk72YMpkLl0Wj08SjNBV60"
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+#define ScreenWidth [[UIScreen mainScreen]bounds].size.width
+
+#define ScreenHeight [[UIScreen mainScreen]bounds].size.height
+
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#define KNOTIFICATION_LOGINCHANGE @"loginStateChange"
+
+#define KEY @"ABCDEFGHIJKLMNOP"
+
+#define URLKEY2 @"http://123.57.7.202"
+
+#define URLKEY @"http://182.92.214.123/ZiRobot/FileDownloadServlet?path="
+
+#define ZhiLingURL @"http://182.92.214.123/ZiRobot/FileDownloadServlet?path=/ios/"
+
+#define Title @"董秘"
+
+#define BARBUTTON(TITLE, SELECTOR)		[[UIBarButtonItem alloc] initWithTitle:TITLE style:UIBarButtonItemStylePlain target:self action:SELECTOR]//UIBarButtonItem
+#define SETCOLOR(RED,GREEN,BLUE) [UIColor colorWithRed:RED/255 green:GREEN/255 blue:BLUE/255 alpha:1.0]
+
+
+#define KhuanxinAppkey				@"lianyou#zirobot"
+#define KhuanxinSuperUserName		@"lianyoutianxia"
+#define KhuanxinSuperUserPassword	@"lianyou1904"
+
+#define Finished @"finished"
+
+#define Khuanxin_dis @"dis_apns_zirobot"
+
+#define Down_plist @"ZiRobot.plist"
+
+#define LAST_APP_VERSION @"LAST_APP_VERSION"
+
+#define KFirst 10000
+#define KSecond 1000
+
+#define TIMEOUT_VALUE         @"20000"            // timeout      连接超时的时间，以ms为单位
+
+#define APPID_VALUE @"544e6b64"
+#define HelpHtmlUrl @"http://182.92.214.123/ZiRobot/callcenterbak/help/help.html"
+//#define iFly_Test_APPID_VALUE @"5588f782" //jsl328@yeah.net jsl123 账户获得
+
+#define IS_GOURONG 0
+
+#define CHATVIEWBACKGROUNDCOLOR [UIColor colorWithRed:0.936 green:0.932 blue:0.907 alpha:1]
+
+#define UM_AppKey @"543b6e6afd98c5bf12050fe6"
+#define Weixin_Appid @"wxf81e2478d463a6dd"
+#define Weixin_AppSecret @"8287a3aa2caa0a6eb48ffb1129d5a842"
+
+#define QQ_Appid @"1104610961"
+#define QQ_AppSecret @"ow9w5uuTadfMTLXm"
+#define ZhiLingXiuGai @"ZhiLing"
+
+#define UUID @"UUID"
+
+#endif

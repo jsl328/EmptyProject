@@ -1,0 +1,18 @@
+//
+//  SubApplicationFormSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface SubApplicationFormSM : NSObject<IAnnotatable>
+@property (nonatomic, strong) NSString *_id;
+@property (nonatomic, strong) NSString *flowid;
+@property (nonatomic, strong) NSString *chname;
+@property (nonatomic, assign) int sort;
+@property (nonatomic, assign) int type;
+@property (nonatomic, strong) NSString *strs;
+@end

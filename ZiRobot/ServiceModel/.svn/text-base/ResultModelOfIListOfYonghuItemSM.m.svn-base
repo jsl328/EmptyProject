@@ -1,0 +1,22 @@
+//
+//  ResultModelOfIListOfYonghuItemSM.h
+//  Lvxinqing
+//
+//  Created by Galathea on 2014-7-21
+//  Copyright (c) 2014 Galathea. All rights reserved.
+//
+
+#import "ResultModelOfIListOfYonghuItemSM.h"
+
+@implementation ResultModelOfIListOfYonghuItemSM
+@synthesize data;
+@synthesize status;
+@synthesize data1;
+-(void) provideAnnotations:(AnnotationProvider*) ap {
+    DCField(ap, @"status", @"status");
+	DCListField(ap, @"data", @"data", [YonghuItemSM class]);
+	DCListField(ap, @"data1", @"data1", [CompanyDeptsSM class]);
+    
+}
+
+@end

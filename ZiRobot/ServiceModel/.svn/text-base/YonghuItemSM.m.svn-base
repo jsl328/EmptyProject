@@ -1,0 +1,64 @@
+//
+//  YonghuItemSM.h
+//  Nanumanga
+//
+//  Created by r1 on 2014-6-20
+//  Copyright (c) 2014 r1. All rights reserved.
+//
+
+#import "YonghuItemSM.h"
+
+@implementation YonghuItemSM
+@synthesize _id;
+@synthesize name;
+@synthesize letter;
+@synthesize password;
+@synthesize token;
+@synthesize email;
+@synthesize phone;
+@synthesize wechat;
+@synthesize qq;
+@synthesize birthday;
+@synthesize constellation;
+@synthesize hobby;
+@synthesize imgurl;
+@synthesize fontsize;
+@synthesize companyid;
+@synthesize sessionid;
+@synthesize position;
+@synthesize deleteflag;
+@synthesize status;
+@synthesize jobnumber;
+@synthesize isregisterdata;
+@synthesize createtime;
+@synthesize deptid;
+@synthesize deptname;
+
+-(void) provideAnnotations:(AnnotationProvider*) ap {
+    DCField(ap, @"_id", @"id");
+    DCField(ap, @"name", @"name");
+    DCField(ap, @"letter", @"letter");
+    DCField(ap, @"password", @"password");
+	DCField(ap, @"token", @"token");
+    DCField(ap, @"email", @"email");
+    DCField(ap, @"phone", @"phone");
+    DCField(ap, @"wechat", @"wechat");
+    DCField(ap, @"qq", @"qq");
+    DCField(ap, @"birthday", @"birthday");
+    DCField(ap, @"constellation", @"constellation");
+    DCField(ap, @"hobby", @"hobby");
+    DCField(ap, @"imgurl", @"imgurl");
+    DCField(ap, @"fontsize", @"fontsize");
+    DCField(ap, @"companyid", @"companyid");
+    DCField(ap, @"sessionid", @"sessionid");
+    DCField(ap, @"position", @"position");
+    DCField(ap, @"deleteflag", @"deleteflag");
+    DCField(ap, @"status", @"status");
+    DCField(ap, @"jobnumber", @"jobnumber");
+    DCField(ap, @"isregisterdata", @"isregisterdata");
+    DCField(ap, @"createtime", @"createtime");
+    DCField(ap, @"deptid", @"deptid");
+    DCField(ap, @"deptname", @"deptname");
+}
+
+@end

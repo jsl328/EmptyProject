@@ -1,0 +1,27 @@
+//
+//  HelpCentreSM.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/5/8.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface HelpCentreSM : NSObject<IAnnotatable>
+
+@property (nonatomic) int status;
+@property (nonatomic, strong) NSString *msg;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSArray *data;
+
+@end
+
+@interface HelpDataSM : NSObject<IAnnotatable>
+
+@property (nonatomic, strong) NSString *helpid;
+@property (nonatomic, strong) NSString *itemimage;
+@property (nonatomic, strong) NSString *helptitle;
+@property (nonatomic, strong) NSString *detail;
+
+@end

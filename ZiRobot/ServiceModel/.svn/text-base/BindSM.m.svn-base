@@ -1,0 +1,25 @@
+//
+//  BindSM.m
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/7/3.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "BindSM.h"
+
+@implementation BindSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"data", @"data", [BindDataSM class]);
+}
+
+@end
+
+@implementation BindDataSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+}
+
+@end

@@ -1,0 +1,20 @@
+//
+//  MapsSM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "MapsSM.h"
+
+@implementation MapsSM
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+	DCField(ap, @"chname", @"chname");
+	DCField(ap, @"flowid", @"flowid");
+	DCField(ap, @"sort", @"sort");
+	DCField(ap, @"type", @"type");
+	DCField(ap, @"strs", @"strs");
+}
+@end

@@ -1,0 +1,36 @@
+//
+//  AppDelegate.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/4/18.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "EaseMob.h"
+#import "DengluViewController.h"
+#import "MainViewController.h"
+#import <CoreLocation/CoreLocation.h>
+#import <BaiduMapAPI/BMapKit.h>
+
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialQQHandler.h"
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate,IChatManagerDelegate,BMKGeneralDelegate>
+{
+    EMConnectionState _connectionState;
+    BOOL needShowNotification;
+    BMKMapManager *_mapManager;
+    NSString *UDID;
+}
+
+@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSDate *lastPlaySoundDate;
+@property (strong, nonatomic) ChatViewController *chatView;
+@property (strong, nonatomic) DengluViewController *dengluVC;
+
+//CLLocationManager
+- (void)fenxiangShouquan:(NSString *)url;
+
+@end

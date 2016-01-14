@@ -1,0 +1,24 @@
+//
+//  CreateApplySM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "CreateApplySM.h"
+
+@implementation CreateApplySM
+
+//-(void)provideAnnotations:(AnnotationProvider *)ap
+//{
+//	DCField(ap, @"createid", @"createid");
+//	DCField(ap, @"createname", @"createname");
+//	DCField(ap, @"flowid", @"flowid");
+//	DCField(ap, @"flowname", @"flowname");
+//	DCField(ap, @"phone", @"phone");
+//	DCField(ap, @"addres", @"addres");
+//	DCListField(ap, @"applyexts", @"applyexts", [MapsSM class]);
+//}
+
+@end

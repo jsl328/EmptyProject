@@ -1,0 +1,20 @@
+//
+//  ApplicationInfoSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+#import "SubApplicationFormSM.h"
+@interface ApplicationInfoSM : NSObject<IAnnotatable>
+@property (nonatomic, strong) NSString *_id;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *infodescription;
+@property (nonatomic, strong) NSString *createid;
+@property (nonatomic, strong) NSString *createtime;
+@property (nonatomic, assign) int deleteflag;
+@property (nonatomic, strong) NSArray *flowitemList;
+@end

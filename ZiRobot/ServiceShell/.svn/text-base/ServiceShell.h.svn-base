@@ -1,0 +1,351 @@
+//
+//  ServiceShell.h
+//  Lvpingguo
+//
+//  Created by fuyonghua on 14-8-28.
+//  Copyright (c) 2014年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "LService.h"
+#import "DCFile.h"
+#import "ResultModelOfIListOfYonghuItemSM.h"
+#import "ResultModelOfGetCodeSM.h"
+#import "ResultMode.h"
+#import "ResultModelOfUserinfoByHxnameSM.h"
+#import "ApplicationFormSM.h"
+#import "CreateApplySM.h"
+#import "TreadeInfoSM.h"
+#import "ZhiLingSM.h"
+#import "ResultModelOfUpdateVersionSM.h"
+#import "ResultModelOfDetailSM.h"
+#import "TreadeYesApplicationSM.h"
+#import "CreateYesTreadeInfoSM.h"
+#import "ResultModelOfMyOrderSM.h"
+#import "ResultOfCreateservice.h"
+#import "currentOreder.h"
+#import "TomsgSM.h"
+#import "CheckInstructUpdSM.h"
+#import "zhilingCodeSM.h"
+#import "CreateCommitBiaodanModel.h"
+#import  "QuanBuDiZhiSM.h"
+#import "HelpCentreSM.h"
+#import "DiZhiDetailSM.h"
+#import "ResultOfCreateAddress.h"
+#import "ZhifuWanSM.h"
+#import "StoresAirPlayXinxiSM.h"
+#import "BaocunjiPiaoXinxiSM.h"
+#import "HuoqulishichengjirenResultSM.h"
+#import "huoquLishiChenjiRenSM.h"
+#import "KaYueSM.h"
+#import "GetCityListForAirplan.h"
+#import "OrderMoney.h"
+#import "ShoujiShanghuaSM.h"
+#import "orderfoodeprice.h"
+#import "PriceResult.h"
+#import "getAirLineListSM.h"
+#import "getAirPortListSM.h"
+#import "orderfoodinfo.h"
+#import "orderfoodPress.h"
+#import "ShengLiebiaoSM.h"
+#import "ChengshiLiebiaoSM.h"
+#import "XingzhengquLiebiaoSM.h"
+#import "QuhuaXinxiSM.h"
+#import "QuhuaXinxiLiebiaoSM.h"
+#import "SubmitHotelOrderSM.h"
+#import "ResultSubmitHotelOrderSM.h"
+#import "HotelListSM.h"
+#import "MyMsgSM.h"
+#import "UpdateUserAttrSM.h"
+#import "EditGetCodeSM.h"
+#import "SetPayPasswordSM.h"
+@interface ServiceShell : NSObject
+
+/*!
+ 登陆
+ */
++(void) employeeLoginWithImei:(NSString *)imei usingCallback:(void (^)(DCServiceContext*, ResultModelOfIListOfYonghuItemSM*)) callback;
+
++(void) employeeLogin2WithPhone:(NSString *)phone Password:(NSString *)password LoginType:(NSString *)loginType InternetType:(NSString *)internetType Versioin:(NSString *)version usingCallback:(void (^)(DCServiceContext*, ResultModelOfIListOfYonghuItemSM*)) callback;
+
+/*!
+ 验证码
+ */
++(void) employeeGetCodeWithPhone:(NSString *)phone Status:(NSString *)status usingCallback:(void (^)(DCServiceContext*, ResultModelOfGetCodeSM*)) callback;
+
+/*!
+ 检验手机验证码
+ */
++(void) employeeGetCodeWithPhone:(NSString *)phone Code:(NSString *)code usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback;
+
+/*!
+ 注册
+ */
++(void) employeeRegisterWithPhone:(NSString *)phone Code:(NSString *)code  Password:(NSString *)password usingCallback:(void (^)(DCServiceContext*, ResultModelOfIListOfYonghuItemSM*)) callback;
+
+/*!
+ 完善资料
+ */
++(void) employeeRegisterWithName:(NSString *)name Position:(NSString *)position Email:(NSString *)email Wechat:(NSString *)wechat Qq:(NSString *)qq Birthday:(NSString *)birthday Jobnumber:(NSString *)jobnumber Id:(NSString *)id Deptid:(NSString *)deptid usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback;
+
+/*!
+ 找回密码
+ */
++(void) employeeFindlostPsdWithPhone:(NSString *)phone Password:(NSString *)password Code:(NSString *)code usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback;
+
+/*!
+ 获取用户详情
+ */
++(void) getUserDetailWithYonghuID:(NSString *) ID Sessionid:(NSString *)sessionid usingCallback:(void (^)(DCServiceContext*, ResultModelOfIListOfYonghuItemSM*)) callback;
+
+
+/*!
+ 获取环信信息
+ */
++(void) getUserinfoByHxnameWithAppIds:(NSString *) ids usingCallback:(void (^)(DCServiceContext*, ResultModelOfUserinfoByHxnameSM*)) callback;
+
+/*!
+ 通过指令拿订单 type =20
+ */
++(void) getDingdanByCodeType:(NSString *) DingDanCode usingCallback:(void (^)(DCServiceContext*, zhilingCodeSM*)) callback;
+
+/*!
+ 通过指令拿订单 type =10
+ */
++(void) getDingdanByCodeNotType:(NSString *) DingDanCode usingCallback:(void (^)(DCServiceContext*, ApplicationFormSM*)) callback;
+
+/*!
+ 创建非商品订单
+ */
++(void) createdNotTreadeWithCreateApply:(CreateCommitBiaodanModel *)apply usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback;
+
+/*!
+ 创建商品订单
+ */
++(void) createdTreadeWithCreateApply:(CreateYesTreadeInfoSM *)apply usingCallback:(void (^)(DCServiceContext*, ResultOfCreateservice*)) callback;
+
+/*!
+ 获取系统全部指令
+ */
++(void) getAllInstructionFromSystemUsingCallback:(void (^)(DCServiceContext*, ZhiLingSM*)) callback;
+
+/*!
+ 获取分类指令
+ */
++(void) getAllUserInstructionFromSystemWithLongitude:(NSNumber*)longitude Latitude:(NSNumber*)lati usingCallback:(void (^)(DCServiceContext*, currentOreder*)) callback;
+
+/*!
+ 详单详情
+ */
++(void) getOrderFormDetailID:(NSString *)ID UsingCallback:(void (^)(DCServiceContext*, ResultModelOfDetailSM*)) callback;
+
+/*!
+ 我的订单列表
+ */
++(void) getOrderFormDetailWithStart:(int)start Count:(int)count Createid:(NSString *)createid SerchNmae:(NSString *)serchName UsingCallback:(void (^)(DCServiceContext*, ResultModelOfMyOrderSM*)) callback;
+
+/*!
+ 删除接口
+ */
++(void) getdelMyOrderFormWithID:(NSString *)_id UsingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback;
+
+/*!
+ 服务器消息接收接口
+ */
++(void) getMsgTomsgWithID:(TomsgSM *)tomsg UsingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback;
+
+/*!
+ 获取全部地址
+ */
++(void) getAllMyAddressWithUserID:(NSString*)userID usingCallback:(void (^)(DCServiceContext*, QuanBuDiZhiSM*)) callback;
+
+/*!
+ 删除地址
+ */
++(void) deleteMyAddressWithAddressID:(NSString*)addressID usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback;
+
+/*!
+ 修改地址Get方法
+ */
++(void) updateMyAddressWithAddressID:(NSString*)addressID
+                              UserID:(NSString*)userID
+                              Gender:(NSString*)gender
+                            Provence:(NSString *)provence
+                                City:(NSString*)city
+                                Area:(NSString *)area
+                       DetailAddress:(NSString*)detailaddress
+                       ConsigneeName:(NSString*)name
+                            Telphone:(NSString*)telephone  usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback;
+
+//帮助中心
++(void) helpCenterUsingCallback:(void (^)(DCServiceContext*, HelpCentreSM*)) callback;
+
+/*!
+ 修改地址POST方法
+ */
++(void) updateMyAddressWithDetailSM:(DiZhiDetailSM*)model  usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback;
+
+/*!
+ 添加地址
+ */
++(void) addMyAddressWithUserID:(NSString*)userID
+                 DetailAddress:(NSString*)detailaddress
+                 ConsigneeName:(NSString*)name
+                      Province:(NSString *)province
+                          City:(NSString *)city
+                          Area:(NSString *)area
+                      Telphone:(NSString*)telephone
+                        Gender:(NSString*)gender
+                 usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback;
+
+/*!
+支付接口
+ */
++(void) addMyZhifuWithPurchaseuserid:(NSString*)purchaseuserid Opid:(NSString*)opid From:(NSString*)from To:(NSString*)to usingCallback:(void (^)(DCServiceContext*, ZhifuWanSM*)) callback;
+
+/*!
+保存机票信息
+ */
++(void)storeAirplayInfoSM :(StoresAirPlayXinxiSM*)AirplaySM usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback;
+
+/*!
+ 保存乘机人信息
+ */
++(void)storeChengjiRenInfoSM :(NSString*)createid withids:(NSString *)ids usingCallback:(void (^)(DCServiceContext*, ResultModelOfMyOrderSM*)) callback;
+
+/*!
+ 搜索机票
+ */
++(void) serchAirPlayTicketWithFrom:(NSString*)from To:(NSString*)to dptcity:(NSString*)dptcity dstcity:(NSString*)dstcity starttime:(NSString*)starttime usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback;
+
+/*!
+ 保存机票订单信息
+ */
++(void)baocunJIpiaoxinxiWith:(BaocunjiPiaoXinxiSM *)SM usingCallback:(void (^)(DCServiceContext*, ResultModelOfGetCodeSM*)) callback;
+
+/*!
+获取历史乘机人
+ */
++(void)huoquLishiChenjiRenWith:(NSString *)SM usingCallback:(void (^)(DCServiceContext*, HuoqulishichengjirenResultSM*)) callback;
+
+/**
+ 创建乘机人
+ */
++(void)createChengJiRenXinXiWithPsgName:(NSString *)psgName PsgType:(NSString*)psgType IDType:(NSString*)idType IDNo:(NSString*)idNo Createid:(NSString*)createid ContactPhone:(NSString*)contactPhone usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback;
+
+/**
+ 修改乘机人
+ */
++(void)updateChengJiRenXinXiWithPsgName:(NSString *)psgName PsgType:(NSString*)psgType IDType:(NSString*)idType IDNo:(NSString*)idNo Createid:(NSString*)_id ContactPhone:(NSString*)contactPhone usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback;
+
+/**
+ 删除历史乘机人
+ deletePassenger.action
+ */
++ (void)removeChenjiRenWithChengJiID:(NSString *)ID usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback;
+
+/**
+ 删除已提交乘机人
+ */
++ (void)removeChenjiRenWithOrderID:(NSString *)orderID ChengJiRenID:(NSString*)ID usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback;
+
+/**
+ 获取机票城市信息
+ */
++ (void)getCityForAirusingCallback:(void (^)(DCServiceContext*, GetCityListForAirplan*)) callback;
+
+/**
+ 获取机场信息信息
+ */
++ (void)getAirPortListusingCallback:(void (^)(DCServiceContext*, getAirPortListSM*)) callback;
+
+/**
+ 获取航空公司信息
+ */
++ (void)getAirLineListusingCallback:(void (^)(DCServiceContext*, getAirLineListSM*)) callback;
+
+/*!
+ 获取储蓄卡余额
+ */
++(void)huoquChuxuKayueWith:(NSString *)usrid usingCallback:(void (^)(DCServiceContext*, ResultOfCreateservice*)) callback;
+
+/*!
+ 支付
+ */
++(void)zhiFuWithFromID:(NSString *)fromID withToID:(NSString *)toID withorderuserid:(NSString *)orderuserid withSaveID:(NSString *)saveID Paypassword:(NSString *)paypassword usingCallback:(void (^)(DCServiceContext *, ResultModelOfGetCodeSM *))callback;
+
+//增加订单信息
++(void)orderfoodinfo:(orderfoodinfo *)orderjson usingCallback:(void (^)(DCServiceContext *, orderfoodPress *))callback;
+//点餐from,to,foodids,userid,scname,scaddress,scphone,forderresourse
+
++(void)orderfood:(orderfoodeprice *)orderjson usingCallback:(void (^)(DCServiceContext *, PriceResult *))callback;
+
+//1.1.1	获取省列表
++(void)getProvinceListUsingCallback:(void (^)(DCServiceContext *, ShengLiebiaoSM *))callback;
+
+//1.1.2	查询城市列表
++(void)getCityListByProvinceIdWithProvinceId:(NSString *)provinceId UsingCallback:(void (^)(DCServiceContext *, ChengshiLiebiaoSM *))callback;
+
+//1.1.3	查询行政区列表
++(void)getCountyListByCityIdWithCityId:(NSString *)cityId UsingCallback:(void (^)(DCServiceContext *, XingzhengquLiebiaoSM *))callback;
+
+//1.1.4	根据名称查询区划信息
++(void)getDivisionInfoByNameWithDivisionName:(NSString *)divisionName UsingCallback:(void (^)(DCServiceContext *, QuhuaXinxiSM *))callback;
+
+//1.1.5	根据ID查询区划信息
++(void)getDivisionInfoByNameWithDivisionId:(NSString *)divisionId UsingCallback:(void (^)(DCServiceContext *, QuhuaXinxiLiebiaoSM *))callback;
+
+//1.1.1	提交酒店订单SubmitHotelOrder
++(void)getHotelListWithSubmitHotelOrder:(SubmitHotelOrderSM *)submitHotelOrderSM UsingCallback:(void (^)(DCServiceContext *, ResultSubmitHotelOrderSM *))callback;
+
+/*!
+ 版本更新
+ */
++ (void)getCreateFeedbackWithVersionPlatform:(NSString *)versionPlatform usingCallback:(void(^)(DCServiceContext*,ResultModelOfUpdateVersionSM*))callback;
+
+/*!
+ 2.1.1 获取酒店列表
+ */
++ (void)getHotelListWithListSM:(HotelListSM *)listsm usingCallback:(void(^)(DCServiceContext*,ResultModelOfUpdateVersionSM*))callback;
+
+/*!
+ 1.4 个人信息
+ */
++ (void)getMyMsgWithID:(NSString *)_id usingCallback:(void(^)(DCServiceContext*,MyMsgSM*))callback;
+
+/*!
+ 1.4 修改个人信息
+ */
++ (void)getUpdateUserAttrWithName:(NSString *)name ID:(NSString *)_id Phone:(NSString *)phone shenfenzhengID:(NSString *)classID Gender:(int)gender usingCallback:(void(^)(DCServiceContext*,UpdateUserAttrSM*))callback;
+
+/*!
+ 1.3.4 手机上滑
+ */
++ (void)getShoujiShanghuaUsingCallback:(void(^)(DCServiceContext*,ShoujiShanghuaSM*))callback;
+
+/*!
+ 1.3.3	判断指令是否要更新
+ */
++ (void)getCheckInstructUpdataTime:(NSString *)updateTime UsingCallback:(void(^)(DCServiceContext*,CheckInstructUpdSM*))callback;
+
+/*!
+ 1.1.11	获取手机验证码
+ */
++ (void)getEditGetCodeWithID:(NSString *)_id usingCallback:(void(^)(DCServiceContext*,EditGetCodeSM*))callback;
+
+/*!
+ 1.1.12	设置存储卡支付密码
+ */
++ (void)getSetPayPasswordWithID:(NSString *)_id Code:(NSString *)code Paypassword:(NSString *)paypassword usingCallback:(void(^)(DCServiceContext*,SetPayPasswordSM*))callback;
+
+/*!
+ 1.1.13	重新设置支付密码
+ */
++ (void)getReSetPayPasswordWithID:(NSString *)_id Code:(NSString *)code Paypassword:(NSString *)paypassword Oldpaypassword:(NSString *)oldpaypassword usingCallback:(void(^)(DCServiceContext*,SetPayPasswordSM*))callback;
+
+/*!
+替换客服ID
+ */
++ (void)getReTihuanfuWithFrom:(NSString *)from To:(NSString *)to Type:(int)type usingCallback:(void(^)(DCServiceContext*,ResultMode*))callback;
+
+@end

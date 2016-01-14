@@ -1,0 +1,18 @@
+//
+//  ApplicationFormSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+#import "ApplicationInfoSM.h"
+#import "TreadeYesApplicationSM.h"
+@interface ApplicationFormSM : NSObject<IAnnotatable>
+@property (nonatomic, retain) NSString *msg;
+@property (nonatomic, assign) int type;
+@property (nonatomic, assign) int status;
+@property (retain, nonatomic) ApplicationInfoSM *data2;
+@end

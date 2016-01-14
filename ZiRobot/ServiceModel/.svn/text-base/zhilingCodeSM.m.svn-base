@@ -1,0 +1,23 @@
+//
+//  zhilingCodeSM.m
+//  ZiRobot
+//
+//  Created by 阿布都沙拉木吾斯曼 on 15/4/30.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "zhilingCodeSM.h"
+
+@implementation zhilingCodeSM
+
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+    DCField(ap, @"msg", @"msg");
+    DCField(ap, @"type", @"type");
+    DCField(ap, @"status", @"status");
+    DCListField(ap, @"data", @"data", [TreadeInfoSM class]);
+    
+    //DCListField(ap, @"mol", @"mol", [TreadeInfoSM class]);
+    //DCListField(ap, @"mol", @"mol", [TreadeInfoSM class]);
+}
+@end

@@ -1,0 +1,25 @@
+//
+//  ZhifuKongjianSM.m
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/6/13.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "ZhifuKongjianSM.h"
+
+@implementation ZhifuKongjianSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"data", @"data", [ZhifuKongjianDataSM class]);
+}
+
+@end
+
+@implementation ZhifuKongjianDataSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+}
+
+@end

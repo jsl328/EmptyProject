@@ -1,0 +1,30 @@
+//
+//  TreadeInfoSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface TreadeInfoSM : NSObject<IAnnotatable>
+@property (nonatomic,strong) NSString *productid;
+@property (nonatomic,strong) NSString *type_id;
+@property (nonatomic,strong) NSString *typecode;
+@property (nonatomic,strong) NSString *type_name;
+
+@property (nonatomic,strong) NSString *name ;
+@property (nonatomic,strong) NSString *iconurl;
+@property (nonatomic,assign) int price;
+@property (nonatomic,strong) NSString *unitname ;
+@property (nonatomic,strong) NSString *currency ;
+
+@property (nonatomic,strong) NSString *createtime ;
+@property (nonatomic,strong) NSString *updatetime ;
+@property (nonatomic,strong) NSString *deleteflag ;
+@property (nonatomic,assign) int productcount ;
+@property (nonatomic,strong) NSString *comment ;
+@property (nonatomic,strong) NSString *phone ;
+@property (nonatomic,strong) NSString *addres ;
+@end

@@ -1,0 +1,16 @@
+//
+//  ApplyExtBodyModel.h
+//  ZiRobot
+//
+//  Created by 阿布都沙拉木吾斯曼 on 15/4/30.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface ApplyExtBodyModel : NSObject
+@property (nonatomic,strong)NSString *chname;
+@property (nonatomic,assign)int sort;
+@property (nonatomic,assign)int type;
+@property (nonatomic,strong)NSString *content;
+@end

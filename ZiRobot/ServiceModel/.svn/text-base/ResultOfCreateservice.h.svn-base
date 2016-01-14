@@ -1,0 +1,64 @@
+//
+//  ResultOfCreateservice.h
+//  ZiRobot
+//
+//  Created by 阿布都沙拉木吾斯曼 on 15/4/23.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+
+@class ResultModelOfOrderSM;
+@class ResultModelOfT_OrderSM;
+@class ResultOfCreateserviceDataSM;
+@interface ResultOfCreateservice : NSObject<IAnnotatable>
+@property (nonatomic,strong) NSString *msg;
+@property (nonatomic,strong) NSString *title;
+@property (nonatomic)int status;
+@property (nonatomic ,strong) ResultOfCreateserviceDataSM *data;
+@property (nonatomic ,strong) NSArray *data1;
+@property (nonatomic ,strong) NSArray *data2;
+@end
+
+@interface ResultOfCreateserviceDataSM : NSObject<IAnnotatable>
+@property (nonatomic, retain) NSString *starttime;
+
+@property (nonatomic, retain) NSString *endtime;
+@property (nonatomic, retain) NSString *serchname;
+@property (nonatomic, retain) NSString *_id;
+@property (nonatomic, retain) NSString *orderid;
+@property (nonatomic) int ordertype;
+@property (nonatomic) int status;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *icon;
+@property (nonatomic, retain) NSString *createtime;
+@property (nonatomic, retain) NSString * orderproperty;
+@property (nonatomic, retain) NSString * orderpropertytwo;
+@property (nonatomic, retain) NSString * orderuserid;
+@property (nonatomic, retain) NSString * ordercreateid;
+@property (nonatomic) int deleteflag;
+@property (nonatomic, retain) NSString *statusValue;
+@property (nonatomic) float orderprice;
+@end
+
+
+@interface ResultOfCreateserviceData1SM : NSObject<IAnnotatable>
+@property (nonatomic,strong) NSString *valuecardid;
+@property (nonatomic ,strong) NSString *userid;
+@property (nonatomic ) int valuecardtype;
+@property (nonatomic ,strong) NSString *valuecardname;
+@property (nonatomic) int deleteflag;
+@property (nonatomic ,strong) NSString *createtime;
+@property (nonatomic ,strong) NSArray *listvcmoney;
+@end
+
+@interface ListvcmoneySM : NSObject<IAnnotatable>
+@property (nonatomic,strong) NSString *vcmoneyid;
+@property (nonatomic ,strong) NSString *valuecardid;
+@property (nonatomic ) int vcmoneytype;
+@property (nonatomic) float vcmoney;
+@property (nonatomic ,strong) NSString *typename1;
+@end
+
+

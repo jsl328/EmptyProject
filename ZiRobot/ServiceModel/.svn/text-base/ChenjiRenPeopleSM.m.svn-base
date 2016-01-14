@@ -1,0 +1,17 @@
+//
+//  ChenjiRenPeopleSM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-14.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "ChenjiRenPeopleSM.h"
+
+@implementation ChenjiRenPeopleSM
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+	DCField(ap, @"_id", @"id");
+	
+}
+@end

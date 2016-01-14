@@ -1,0 +1,43 @@
+//
+//  StoresAirPlayXinxiSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-13.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+//#import "IAnnotatable.h"
+#import "SubBodyAirplaySM.h"
+@interface StoresAirPlayXinxiSM : NSObject
+
+@property (nonatomic,strong)NSString *orderId;
+@property (nonatomic,strong)NSString *departure;
+@property (nonatomic,strong)NSString *arrival;
+
+@property (nonatomic,strong)NSString *airline;
+@property (nonatomic,strong)NSString *flightNo;
+@property (nonatomic,strong)NSString *startAirPort;
+@property (nonatomic,strong)NSString *departureTime;
+@property (nonatomic,strong)NSString *endAirPort;
+@property (nonatomic,strong)NSString *arrivalTime;
+@property (nonatomic,strong)NSString *stopNo;
+@property (nonatomic,strong)NSString *stopcity;
+@property (nonatomic,strong)NSString *isFood;
+@property (nonatomic,strong)NSString *isCodeShare;
+@property (nonatomic,strong)NSString *carrier;
+@property (nonatomic,strong)NSString *planeType;
+@property (nonatomic,strong)NSString *fullPrice;
+
+//SubBodyAirplay
+@property (nonatomic,strong)NSArray *cabinItems;
+
+@property (nonatomic,strong)NSString *punctualityRate;
+@property (nonatomic,strong)NSString *startAir;
+@property (nonatomic,strong)NSString *endAir;
+@property (nonatomic,strong)NSString *isSale;
+@property (nonatomic,assign)int airportTax;
+@property (nonatomic,assign)int fuelTax;
+@property (nonatomic,strong)NSString *shareFlightNo;
+@property (nonatomic,strong)NSString *enfantPrice;
+@end

@@ -1,0 +1,17 @@
+//
+//  ResultOfsubObjectSM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-15.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "ResultOfsubObjectSM.h"
+#import "SingleOrCompanyYueSM.h"
+@implementation ResultOfsubObjectSM
+
+-(void)provideAnnotations:(AnnotationProvider *)ap{
+
+	DCListField(ap, @"listvcmoney", @"listvcmoney", [SingleOrCompanyYueSM class]);
+}
+@end

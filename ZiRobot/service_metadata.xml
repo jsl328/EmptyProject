@@ -1,0 +1,586 @@
+<ServiceMetadata>
+	
+	<!-- 此部分为底层行为设置，请勿修改。如有问题请联系相关负责人。 -->
+	<Config>
+		<Url DateParser="ymdhms" Enum="integer" />
+		<Decoder Name="json" BodyEncoding="utf-8" />
+		<Encoder Name="json" DateParser="ms" BodyEncoding="utf-8" Enum="integer" />
+		<EnumParser Name="LvpingguoEnumParser" />
+	</Config>
+	
+	<Defaults
+	IsExclusive="false"
+	CheckNetwork="true"
+	IsLoggingEnabled="true"
+	ShowWaitBox="false"
+	ShowError="true"
+	CheckPayedNetwork="true"
+	Timeout="30"
+	Network="all" />
+    <!-- http://182.92.214.123 http://192.168.209.171:8080 -->
+	<Urls>
+		
+		<Url
+		Name="yonghuRestServiceUrl"
+		Value="http://182.92.214.123/ZiRobot/user/" />
+		
+		<Url
+		Name="yonghuRestServiceUrlWithCode"
+
+		Value="http://182.92.214.123/ZiRobot/instruct/" />
+		
+		<Url
+		Name="yonghuRestServiceUrlWithCreatedInfoSM"
+		Value="http://182.92.214.123/ZiRobot/apply/" />
+        
+        <Url
+        Name="yonghuRestServiceUrlWithCreatedInfo"
+        Value="http://182.92.214.123/ZiRobot/order/" />
+       
+        <Url
+        Name="instruct"
+
+        Value="http://182.92.214.123/ZiRobot/instruct/" />
+
+        <Url
+        Name="apply"
+
+        Value="http://182.92.214.123/ZiRobot/apply/" />
+        
+        <Url
+        Name="serviceCenterCommand"
+        Value="http://182.92.214.123/ZiRobot/instruct/" />
+        
+        <Url
+        Name="delMyOrderForm"
+        Value="http://182.92.214.123/ZiRobot/allorder/" />
+        
+        <Url
+        Name="tomsgMsg"
+        Value="http://182.92.214.123/ZiRobot/msg/" />
+        
+        <Url
+        Name="userAddress"
+        Value="http://182.92.214.123/ZiRobot/userAddress/" />
+        
+        <Url
+        Name="helpcenter"
+        Value="http://182.92.214.123/ZiRobot/helpcenter/" />
+		
+		<Url
+		Name="storeAirPlay"
+		Value="http://182.92.214.123/ZiRobot/ticket/" />
+
+        <Url
+        Name="searchTicket"
+        Value="http://182.92.214.123/ZiRobot/" />
+		
+		<Url
+		Name="saveJipiaoDingdan"
+		Value="http://182.92.214.123/ZiRobot/ticketOrder/" />
+		
+		<Url
+		Name="huoquchengjiRen"
+		Value="http://182.92.214.123/ZiRobot/contact/" />
+		
+        
+        <Url
+        Name="jiPiaoChengShi"
+        Value="http://182.92.214.123/ZiRobot/geography/" />
+        
+        <Url
+        Name="jiChangXinXi"
+        Value="http://182.92.214.123/ZiRobot/airport/" />
+
+        <Url
+        Name="hangKongGongSiXinXi"
+        Value="http://182.92.214.123/ZiRobot/airline/" />
+        
+		<Url
+		Name="baocunChengjiRen"
+		Value="http://182.92.214.123/ZiRobot/passenger/" />
+		
+		<Url
+		Name="huoquChuxuKayue"
+		Value="http://182.92.214.123/ZiRobot/valuecard/" />
+		
+		<Url
+		Name="zhifu"
+		Value="http://182.92.214.123/ZiRobot/allorder/" />
+        
+        <Url
+        Name="foodorder"
+        Value="http://182.92.214.123/ZiRobot/foodorder/" />
+        
+        <Url
+        Name="hotel"
+        Value="http://182.92.214.123/ZiRobot/hotel/" />
+		
+        
+        <Url
+        Name="publicModule"
+        Value="http://182.92.214.123/ZiRobot/publicModule/" />
+        
+    </Urls>
+    
+    <ServiceMethods>
+        <!-- 登陆与注册 -->
+        <!-- 责任人：崔志宇 -->
+        <ServiceMethod
+        Method="GET"
+        Name="loginMobile.action"
+        Parameters="imei"
+        Url="[yonghuRestServiceUrl]loginMobile.action"
+        ShowWaitBox="false"
+        ShowError="false"
+        Timeout="30" />
+		
+        <!-- 版本更新 -->
+        <!-- 责任人：崔志宇 -->
+        <ServiceMethod
+        Method="GET"
+        Name="updateVersion.action"
+        Parameters="version.platform"
+        Url="[yonghuRestServiceUrl]updateVersion.action"
+        ShowWaitBox="false"
+        ShowError="false"
+        Timeout="30" />
+        
+		<!-- 通过指令拿订单 -->
+		<!-- 责任人：崔智瑜 -->
+
+        <ServiceMethod
+        Method="GET"
+        Name="getOrderForm.action"
+        Parameters="code"
+        Url="[yonghuRestServiceUrlWithCode]getOrderForm.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+		<ServiceMethod
+		Method="GET"
+		Name="getOrderForm.action"
+		Parameters="code"
+		Url="[yonghuRestServiceUrlWithCode]getOrderForm.action"
+		ShowWaitBox="false"
+		Timeout="30" />
+		
+		<!-- 创建非商品订单 -->
+		<!-- 责任人：崔智瑜 -->
+		<ServiceMethod
+		Method="POST"
+		Name="create.action"
+		Parameters="/~"
+		Url="[yonghuRestServiceUrlWithCreatedInfoSM]create.action"
+		ShowWaitBox="false"
+		Timeout="30" />
+		
+		<!-- 创建商品订单 -->
+		<!-- 责任人：崔智瑜 -->
+		<ServiceMethod
+		Method="POST"
+		Name="createProductOrderForm.action"
+		Parameters="/~"
+		Url="[yonghuRestServiceUrlWithCreatedInfo]createProductOrderForm.action"
+		ShowWaitBox="false"
+		Timeout="30" />
+		
+        <!-- 获取系统全部指令 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getAllInstruct.action"
+        Parameters=""
+        Url="[instruct]getAllInstruct.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 订单详情 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getOrderFormDetail.action"
+        Parameters="id"
+        Url="[delMyOrderForm]getOrderFormDetail.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 我的订单列表 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getMyOrderFormList.action"
+        Parameters="start,count,orderuserid,name"
+        Url="[delMyOrderForm]getMyOrderFormList.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 获取全部分类指令 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getService.action"
+        Parameters="longitude,latitude"
+        Url="[serviceCenterCommand]getService.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 删除接口 -->
+        <ServiceMethod
+        Method="GET"
+        Name="delMyOrderForm.action"
+        Parameters="id"
+        Url="[delMyOrderForm]delMyOrderForm.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 服务器消息接收接口 -->
+        <ServiceMethod
+        Method="POST"
+        Name="tomsg.action"
+        Parameters="/~"
+        Url="[tomsgMsg]tomsg.action"
+        ShowWaitBox="false"
+        ShowError="false"
+        Timeout="30" />
+        
+        <!-- 获取地址 -->
+        <ServiceMethod
+        Method="GET"
+        Name="myaddress.action"
+        Parameters="userid"
+        Url="[userAddress]myaddress.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 删除地址 -->
+        <ServiceMethod
+        Method="GET"
+        Name="delmyAddr.action"
+        Parameters="addressid"
+        Url="[userAddress]delmyAddr.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 修改地址 -->
+        <ServiceMethod
+        Method="GET"
+        Name="updatemyAddrWithGet"
+        Parameters="addressid,userid,gender,province,city,area,detailaddress,consigneename,consigneetel"
+        Url="[userAddress]updatemyAddr.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+
+        <!-- 帮助中心 -->
+        <ServiceMethod
+        Method="GET"
+        Name="gethelpcenter.action"
+        Parameters=""
+        Url="[helpcenter]gethelpcenter.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 修改地址 -->
+        <ServiceMethod
+        Method="POST"
+        Name="updatemyAddrWithPost"
+        Parameters="/~"
+        Url="[userAddress]updatemyAddr.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 创建地址 -->
+        <ServiceMethod
+        Method="GET"
+        Name="addMyAddress.action"
+        Parameters="userid,detailaddress,consigneename,province,city,area,consigneetel,gender"
+        Url="[userAddress]addMyAddress.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 支付接口 -->
+        <ServiceMethod
+        Method="GET"
+        Name="payProductOrder.action"
+        Parameters="purchaseuserid,opid,from,to"
+        Url="[yonghuRestServiceUrlWithCreatedInfo]payProductOrder.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+		
+		<!-- 保存机票信息 -->
+		<ServiceMethod
+		Method="POST"
+		Name="saveTic.action"
+		Parameters="/~"
+		Url="[storeAirPlay]saveTic.action"
+		ShowWaitBox="false"
+		Timeout="30" />
+		
+        <!-- 接口 -->
+        <ServiceMethod
+        Method="GET"
+        Name="searchAirTicket"
+        Parameters="from,to,startloc,endloc,starttime"
+        Url="[searchTicket]SerchTicketServlet"
+        ShowWaitBox="false"
+        Timeout="30" />
+		
+		<!-- 保存机票订单信息 -->
+		<ServiceMethod
+		Method="POST"
+		Name="save.action"
+		Parameters="/~"
+		Url="[saveJipiaoDingdan]save.action"
+		ShowWaitBox="false"
+		Timeout="30" />
+		
+		<!-- 获取历史乘机人信息 -->
+		<ServiceMethod
+		Method="GET"
+		Name="list.action"
+		Parameters="createid"
+		Url="[huoquchengjiRen]list.action"
+		ShowWaitBox="false"
+		Timeout="30" />
+
+        <!-- 新增乘机人信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="addCheckIn"
+        Parameters="psgName,psgType,idType,idNo,createid,contactPhone"
+        Url="[huoquchengjiRen]add.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 修改乘机人信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="updateCheckIn"
+        Parameters="psgName,psgType,idType,idNo,id,contactPhone"
+        Url="[huoquchengjiRen]update.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 删除历史乘机人信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="deleteCheckInCustomer"
+        Parameters="id"
+        Url="[huoquchengjiRen]deleteConstant.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+		<!-- 提交乘机人 -->
+		<ServiceMethod
+		Method="GET"
+		Name="submit.action"
+		Parameters="ids,orderId"
+		Url="[baocunChengjiRen]submit.action"
+		ShowWaitBox="false"
+		Timeout="30" />
+		
+        <!-- 删除已提交的乘机人 -->
+        <ServiceMethod
+        Method="GET"
+        Name="deletePassenger.action"
+        Parameters="orderId,id"
+        Url="[baocunChengjiRen]deletePassenger.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 获取机票城市信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="huoQuJiPiaoChengShi"
+        Parameters=""
+        Url="[jiPiaoChengShi]getlist.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 获取机场信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="huoQujiChangXinXi"
+        Parameters=""
+        Url="[jiChangXinXi]airportList.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 获取航空公司信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="huoQuhangKongGongSiXinXi"
+        Parameters=""
+        Url="[hangKongGongSiXinXi]getlist.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+		<!-- 获取存储卡余额 -->
+		<ServiceMethod
+		Method="GET"
+		Name="obtainValueCard.action"
+		Parameters="userid"
+		Url="[huoquChuxuKayue]obtainValueCard.action"
+		ShowWaitBox="false"
+		Timeout="30" />
+		
+		<!-- 支付 -->
+		<ServiceMethod
+		Method="GET"
+		Name="payAllTicketOrder.action"
+		Parameters="from,to,orderuserid,id,paypassword"
+		Url="[zhifu]payAllTicketOrder.action"
+		ShowWaitBox="false"
+		Timeout="30" />
+        
+        <!-- 点餐 -->
+        <ServiceMethod
+        Method="POST"
+        Name="doOrderFood.action"
+        
+        Parameters="/~"
+        
+        Url="[foodorder]doOrderFood.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        
+        <!-- 增加订餐信息 -->
+        <ServiceMethod
+        Method="POST"
+        Name="addFoodInfo.action"
+        
+        Parameters="/~"
+        
+        Url="[foodorder]addFoodInfo.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 获取酒店列表 -->
+        <ServiceMethod
+        Method="POST"
+        Name="getHotelList.action"
+        
+        Parameters="/~"
+        
+        Url="[hotel]getHotelList.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.1.1	获取省列表 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getProvinceList.action"
+        Parameters=""
+        Url="[publicModule]getProvinceList.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.1.2	查询城市列表 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getCityListByProvinceId.action"
+        Parameters="provinceId"
+        Url="[publicModule]getCityListByProvinceId.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.1.3	查询行政区列表 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getCountyListByCityId.action"
+        Parameters="cityId"
+        Url="[publicModule]getCountyListByCityId.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.1.4	根据名称查询区划信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getDivisionInfoByName.action"
+        Parameters="divisionName"
+        Url="[publicModule]getDivisionInfoByName.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.1.5	根据ID查询区划信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getDivisionInfoByName.action"
+        Parameters="divisionId"
+        Url="[publicModule]getDivisionInfoByName.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.1.4	个人信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getMyMsg.action"
+        Parameters="id"
+        Url="[yonghuRestServiceUrl]getMyMsg.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.1.5 修改个人信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="updateUserAttr.action"
+        Parameters="name,id,phone,idcard,gender"
+        Url="[yonghuRestServiceUrl]updateUserAttr.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.3.4	手机上滑 -->
+        <ServiceMethod
+        Method="GET"
+        Name="shoujiShanghua.action"
+        Parameters=""
+        Url="[yonghuRestServiceUrl]shoujiShanghua.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.3.3	判断指令是否要更新 -->
+        <ServiceMethod
+        Method="GET"
+        Name="checkInstructUpd.action"
+        Parameters="instructUpd.updateTime"
+        Url="[yonghuRestServiceUrlWithCode]checkInstructUpd.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.1.11	获取手机验证码 -->
+        <ServiceMethod
+        Method="GET"
+        Name="editGetCode.action"
+        Parameters="id"
+        Url="[yonghuRestServiceUrl]editGetCode.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.1.12	设置存储卡支付密码 -->
+        <ServiceMethod
+        Method="GET"
+        Name="setPayPassword.action"
+        Parameters="id,code,paypassword"
+        Url="[yonghuRestServiceUrl]setPayPassword.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 1.1.13	重新设置支付密码-->
+        <ServiceMethod
+        Method="GET"
+        Name="reSetPayPassword.action"
+        Parameters="id,code,paypassword,oldpaypassword"
+        Url="[yonghuRestServiceUrl]reSetPayPassword.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+        <!-- 替换客服ID-->
+        <ServiceMethod
+        Method="GET"
+        Name="heartbeatCallcenterHx.action"
+        Parameters="from,to,type"
+        Url="[tomsgMsg]heartbeatCallcenterHx.action"
+        ShowWaitBox="false"
+        Timeout="30" />
+        
+    </ServiceMethods>
+	
+</ServiceMetadata>

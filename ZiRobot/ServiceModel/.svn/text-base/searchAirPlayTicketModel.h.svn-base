@@ -1,0 +1,21 @@
+//
+//  searchAirPlayTicketModel.h
+//  ZiRobot
+//
+//  Created by 阿布都沙拉木吾斯曼 on 15/5/12.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+@class EMMessage;
+@interface searchAirPlayTicketModel : NSObject
+@property (nonatomic,strong)NSString *startName;
+@property (nonatomic,strong)NSString *endName;
+@property (nonatomic,strong)NSString *startloc;
+@property (nonatomic,strong)NSString *endloc;
+@property (nonatomic,strong)NSString *starttime;
+@property (nonatomic ,strong) EMMessage *message;
+
+
+
+@end

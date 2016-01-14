@@ -1,0 +1,54 @@
+//
+//  ResultModelOfMyOrderSM.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/4/21.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@class ResultModelOfMyOrderDataSM;
+@class ResultModelOfMyOrderData1SM;
+@interface ResultModelOfMyOrderSM : NSObject<IAnnotatable>
+@property (nonatomic) int status;
+@property (nonatomic,retain) NSString *title;
+@property (nonatomic,retain) NSString *msg;
+
+@property (nonatomic, retain) NSArray *data;
+@property (nonatomic, retain) NSArray *data1;
+@end
+
+@interface ResultModelOfMyOrderDataSM : NSObject<IAnnotatable>
+@property (nonatomic, strong) NSString *starttime;
+@property (nonatomic, strong) NSString *endtime;
+@property (nonatomic, strong) NSString *serchname;
+@property (nonatomic, strong) NSString *_id;
+@property (nonatomic, strong) NSString *orderid;
+@property (nonatomic) int ordertype;
+@property (nonatomic) int status;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *icon;
+@property (nonatomic, strong) NSString *createtime;
+@property (nonatomic, strong) NSString *orderproperty;
+@property (nonatomic, strong) NSString *orderpropertytwo;
+@property (nonatomic, strong) NSString *orderuserid;
+@property (nonatomic, strong) NSString *ordercreateid;
+@property (nonatomic) int deleteflag;
+@property (nonatomic, strong) NSString *statusValue;
+@end
+
+@interface ResultModelOfMyOrderData1SM : NSObject<IAnnotatable>
+@property (nonatomic, strong) NSString *_id;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *iconurl;
+@property (nonatomic) float price;
+@property (nonatomic, strong) NSString *unitname;
+@property (nonatomic, strong) NSString *currency;
+@property (nonatomic, strong) NSString *createtime;
+@property (nonatomic,strong) NSString *orderid;
+@property (nonatomic, strong) NSString *orderno;
+@property (nonatomic, strong) NSString *orderstatus;
+@property (nonatomic, strong) NSString *updatetime;
+@property (nonatomic) int productcount;
+@end

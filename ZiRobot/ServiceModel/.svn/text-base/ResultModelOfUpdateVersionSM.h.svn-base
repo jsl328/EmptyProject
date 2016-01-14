@@ -1,0 +1,26 @@
+//
+//  ResultModelOfUpdateVersionSM.h
+//  Lvpingguo
+//
+//  Created by fuyonghua on 14-10-20.
+//  Copyright (c) 2014年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@class UpdateVersionSM;
+@interface ResultModelOfUpdateVersionSM : NSObject<IAnnotatable>
+@property (nonatomic, assign) int status;
+@property (nonatomic, strong) NSString *msg;
+@property (nonatomic, strong) NSString *data;
+@property (nonatomic, strong) UpdateVersionSM *entity;
+@end
+
+@interface UpdateVersionSM : NSObject<IAnnotatable>
+@property (nonatomic, strong) NSString *_id;
+@property (nonatomic, strong) NSString *platform;
+@property (nonatomic, strong) NSString *versioncode;
+@property (nonatomic, strong) NSString *updateurl;
+@property (nonatomic, strong) NSString *updateinfo;
+@property (nonatomic, assign) int isornoJR;
+@end

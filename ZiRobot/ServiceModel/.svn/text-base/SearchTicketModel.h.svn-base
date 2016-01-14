@@ -1,0 +1,15 @@
+//
+//  SearchTicketModel.h
+//  ZiRobot
+//
+//  Created by 阿布都沙拉木吾斯曼 on 15/5/13.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "searchAirPlayTicketModel.h"
+@interface SearchTicketModel : NSObject
+@property (nonatomic ,strong) NSString *status;
+@property (nonatomic ,strong) NSString *type;
+@property (nonatomic ,strong) searchAirPlayTicketModel *data;
+@end

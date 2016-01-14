@@ -1,0 +1,82 @@
+//
+//  DongMiCeShi.h
+//  ZiRobot
+//
+//  Created by 阿布都沙拉木吾斯曼 on 15/6/24.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#ifndef ZiRobot_DongMiCeShi_h
+#define ZiRobot_DongMiCeShi_h
+
+typedef enum {
+    AliPaySuccess = 9000, //9000 订单支付成功
+    AliPayIsDealing = 8000, //8000 正在处理中
+    AliPayFaild = 4000, //4000 订单支付失败
+    AliPayCancel = 6001, //6001 用户中途取消
+    AliPayNetDisconected = 6002, //6002 网络连接出错
+}AliPayReturnState;
+
+#define IOSDEVICE ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+
+#define MAPKIT @"wviwGZgtAbHD4Mzs1e80V8fj"
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+#define ScreenWidth [[UIScreen mainScreen]bounds].size.width
+
+#define ScreenHeight [[UIScreen mainScreen]bounds].size.height
+
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#define KNOTIFICATION_LOGINCHANGE @"loginStateChange"
+
+#define KEY @"ABCDEFGHIJKLMNOP"
+
+#define URLKEY2 @"http://123.57.7.202"
+
+#define URLKEY @"http://182.92.214.123/ZiRobot/FileDownloadServlet?path="
+
+#define ZhiLingURL @"http://182.92.214.123/ZiRobot/FileDownloadServlet?path=/ios/"
+
+#define Title @"董秘测试"
+
+#define BARBUTTON(TITLE, SELECTOR)		[[UIBarButtonItem alloc] initWithTitle:TITLE style:UIBarButtonItemStylePlain target:self action:SELECTOR]//UIBarButtonItem
+#define SETCOLOR(RED,GREEN,BLUE) [UIColor colorWithRed:RED/255 green:GREEN/255 blue:BLUE/255 alpha:1.0]
+
+
+#define KhuanxinAppkey				@"lianyou#dongmi"
+#define KhuanxinSuperUserName		@"lianyoutianxia"
+#define KhuanxinSuperUserPassword	@"lianyou1904"
+
+#define Finished @"finished"
+
+#define Khuanxin_dis @"dis_DongMi"
+
+#define Down_plist @"DongMi.plist"
+
+#define LAST_APP_VERSION @"LAST_APP_VERSION"
+
+#define KFirst 10000
+#define KSecond 1000
+
+#define TIMEOUT_VALUE         @"20000"            // timeout      连接超时的时间，以ms为单位
+
+#define APPID_VALUE @"544e6b64"
+#define HelpHtmlUrl @"http://114.112.98.157:8080/ZiRobot/callcenterbak/help/help.html"
+
+#define IS_GOURONG 0
+
+#define CHATVIEWBACKGROUNDCOLOR [UIColor colorWithRed:0.936 green:0.932 blue:0.907 alpha:1]
+
+#define UM_AppKey @"558905f567e58e27670006f8"
+#define Weixin_Appid @"wx3911780587db5796"
+#define Weixin_AppSecret @"3408b84e815fbdf2578534dd70b0d9ca"
+
+#define QQ_Appid @"1104658581"
+#define QQ_AppSecret @"8TECWKU9RdMp3VoX"
+#define ZhiLingXiuGai @"ZhiLing"
+
+#define UUID @"UUID"
+
+#endif

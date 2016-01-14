@@ -1,0 +1,19 @@
+//
+//  CreateApplySM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "MapsSM.h"
+@interface CreateApplySM : NSObject
+@property (retain, nonatomic) NSString *createid;
+@property (retain, nonatomic) NSString *createname;
+@property (retain, nonatomic) NSString *flowid;
+@property (retain, nonatomic) NSString *flowname;
+@property (retain, nonatomic) NSString *phone;
+@property (retain, nonatomic) NSString *addres;
+@property (retain, nonatomic) NSArray *applyexts;
+@end

@@ -1,0 +1,344 @@
+//
+//  ServiceShell.m
+//  Lvpingguo
+//
+//  Created by fuyonghua on 14-8-28.
+//  Copyright (c) 2014年 fuyonghua. All rights reserved.
+//
+
+#import "ServiceShell.h"
+
+@implementation ServiceShell
+
++(void) employeeLoginWithImei:(NSString *)imei usingCallback:(void (^)(DCServiceContext*, ResultModelOfIListOfYonghuItemSM*)) callback{
+	[LService request:@"loginMobile.action" with:@[imei] returns:[ResultModelOfIListOfYonghuItemSM class] whenDone:callback];
+}
+
++(void) employeeLogin2WithPhone:(NSString *)phone Password:(NSString *)password LoginType:(NSString *)loginType InternetType:(NSString *)internetType Versioin:(NSString *)version usingCallback:(void (^)(DCServiceContext*, ResultModelOfIListOfYonghuItemSM*)) callback{
+	[LService request:@"login.action2" with:@[phone,password,loginType,internetType,version] returns:[ResultModelOfIListOfYonghuItemSM class] whenDone:callback];
+}
+
+
+
++(void) employeeGetCodeWithPhone:(NSString *)phone Status:(NSString *)status usingCallback:(void (^)(DCServiceContext*, ResultModelOfGetCodeSM*)) callback{
+	[LService request:@"getCode.action" with:@[phone,status] returns:[ResultModelOfGetCodeSM class] whenDone:callback];
+}
+
++(void) employeeGetCodeWithPhone:(NSString *)phone Code:(NSString *)code usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback{
+	[LService request:@"checkCode.action" with:@[phone,code] returns:[ResultMode class] whenDone:callback];
+}
+
++(void) employeeRegisterWithPhone:(NSString *)phone Code:(NSString *)code  Password:(NSString *)password usingCallback:(void (^)(DCServiceContext*, ResultModelOfIListOfYonghuItemSM*)) callback{
+	[LService request:@"register.action" with:@[phone,code,password] returns:[ResultModelOfIListOfYonghuItemSM class] whenDone:callback];
+}
+
++(void) employeeRegisterWithName:(NSString *)name Position:(NSString *)position Email:(NSString *)email Wechat:(NSString *)wechat Qq:(NSString *)qq Birthday:(NSString *)birthday Jobnumber:(NSString *)jobnumber Id:(NSString *)id Deptid:(NSString *)deptid usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback{
+	[LService request:@"writeInfo.action" with:@[name,position,email,wechat,qq,birthday,jobnumber,id,deptid] returns:[ResultMode class] whenDone:callback];
+}
+
++(void) employeeFindlostPsdWithPhone:(NSString *)phone Password:(NSString *)password Code:(NSString *)code usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback{
+	[LService request:@"findLostPsd.action" with:@[phone,password,code] returns:[ResultMode class] whenDone:callback];
+}
+
++(void) getUserDetailWithYonghuID:(NSString *) ID Sessionid:(NSString *)sessionid usingCallback:(void (^)(DCServiceContext*, ResultModelOfIListOfYonghuItemSM*)) callback{
+	[LService request:@"getMyMsg.action" with:@[ID,sessionid] returns:[ResultModelOfIListOfYonghuItemSM class] whenDone:callback];
+}
+
+
++(void) getUserinfoByHxnameWithAppIds:(NSString *) ids usingCallback:(void (^)(DCServiceContext*, ResultModelOfUserinfoByHxnameSM*)) callback{
+	[LService request:@"getUserinfoByHxuname.action" with:@[ids] returns:[ResultModelOfUserinfoByHxnameSM class] whenDone:callback];
+}
+
++(void)getDingdanByCodeType:(NSString *)DingDanCode usingCallback:(void (^)(DCServiceContext *, zhilingCodeSM *))callback
+{
+	[LService request:@"getOrderForm.action" with:@[DingDanCode] returns:[zhilingCodeSM class] whenDone:callback];
+}
+
++(void)getDingdanByCodeNotType:(NSString *)DingDanCode usingCallback:(void (^)(DCServiceContext *, ApplicationFormSM *))callback
+{
+	[LService request:@"getOrderForm.action" with:@[DingDanCode] returns:[ApplicationFormSM class] whenDone:callback];
+}
+
++(void)createdNotTreadeWithCreateApply:(CreateCommitBiaodanModel *)apply usingCallback:(void (^)(DCServiceContext *, ResultMode *))callback
+{
+	[LService request:@"create.action" with:@[apply] returns:[ResultMode class] whenDone:callback];
+}
+
++(void)createdTreadeWithCreateApply:(id)apply usingCallback:(void (^)(DCServiceContext *, ResultOfCreateservice *))callback
+{
+	
+	[LService request:@"createProductOrderForm.action" with:@[apply] returns:[ResultOfCreateservice class] whenDone:callback];
+}
+
++(void) getAllInstructionFromSystemUsingCallback:(void (^)(DCServiceContext*, ZhiLingSM*)) callback
+{
+	
+	[LService request:@"getAllInstruct.action" with:@[] returns:[ZhiLingSM class] whenDone:callback];
+	
+}
+
++(void) getAllUserInstructionFromSystemWithLongitude:(NSNumber*)longitude Latitude:(NSNumber*)lati usingCallback:(void (^)(DCServiceContext*, currentOreder*)) callback
+{
+    [LService request:@"getService.action" with:@[longitude,lati] returns:[currentOreder class] whenDone:callback];
+}
+
++(void) getOrderFormDetailID:(NSString *)ID UsingCallback:(void (^)(DCServiceContext*, ResultModelOfDetailSM*)) callback{
+	[LService request:@"getOrderFormDetail.action" with:@[ID] returns:[ResultModelOfDetailSM class] whenDone:callback];
+}
+
++(void) getOrderFormDetailWithStart:(int)start Count:(int)count Createid:(NSString *)createid SerchNmae:(NSString *)serchName UsingCallback:(void (^)(DCServiceContext*, ResultModelOfMyOrderSM*)) callback{
+	[LService request:@"getMyOrderFormList.action" with:@[[NSNumber numberWithInt:start],[NSNumber numberWithInt:count],createid,serchName] returns:[ResultModelOfMyOrderSM class] whenDone:callback];
+}
+
++(void) getdelMyOrderFormWithID:(NSString *)_id UsingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback{
+
+    [LService request:@"delMyOrderForm.action" with:@[_id] returns:[ResultModelOfMyOrderSM class] whenDone:callback];
+}
+
++(void) getMsgTomsgWithID:(TomsgSM *)tomsg UsingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback{
+    [LService request:@"tomsg.action" with:@[tomsg] returns:[ResultMode class] whenDone:callback];
+}
+
+/*!
+ 获取全部地址
+ */
++(void) getAllMyAddressWithUserID:(NSString*)userID usingCallback:(void (^)(DCServiceContext*context, QuanBuDiZhiSM*)) callback{
+     [LService request:@"myaddress.action" with:@[userID] returns:[QuanBuDiZhiSM class] whenDone:callback];
+}
+
+/*!
+ 删除地址
+ */
++(void) deleteMyAddressWithAddressID:(NSString*)addressID usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback{
+     [LService request:@"delmyAddr.action" with:@[addressID] returns:[ResultMode class] whenDone:callback];
+}
+
++(void)updateMyAddressWithAddressID:(NSString *)addressID UserID:(NSString *)userID Gender:(NSString *)gender Provence:(NSString *)provence City:(NSString *)city Area:(NSString *)area DetailAddress:(NSString *)detailaddress ConsigneeName:(NSString *)name Telphone:(NSString *)telephone usingCallback:(void (^)(DCServiceContext *, ResultMode *))callback
+{
+    [LService request:@"updatemyAddrWithGet" with:@[addressID,userID,gender,provence,city,area,detailaddress,name,telephone] returns:[ResultMode class] whenDone:callback];
+}
+
++(void) helpCenterUsingCallback:(void (^)(DCServiceContext*, HelpCentreSM*)) callback{
+    [LService request:@"gethelpcenter.action" with:@[] returns:[HelpCentreSM class] whenDone:callback];
+}
+
+
+/*!
+ 修改地址POST方法
+ */
++(void) updateMyAddressWithDetailSM:(DiZhiDetailSM*)model  usingCallback:(void (^)(DCServiceContext*, ResultMode*)) callback
+{
+    [LService request:@"updatemyAddrWithPost" with:@[model] returns:[ResultMode class] whenDone:callback];
+}
+
++(void) addMyAddressWithUserID:(NSString*)userID
+                 DetailAddress:(NSString*)detailaddress
+                 ConsigneeName:(NSString*)name
+                      Province:(NSString *)province
+                          City:(NSString *)city
+                          Area:(NSString *)area
+                      Telphone:(NSString*)telephone
+                        Gender:(NSString*)gender
+                 usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback
+{
+     [LService request:@"addMyAddress.action" with:@[userID,detailaddress,name,province,city,area,telephone,gender] returns:[ResultMode class] whenDone:callback];
+}
+
++(void) addMyZhifuWithPurchaseuserid:(NSString*)purchaseuserid Opid:(NSString*)opid From:(NSString*)from To:(NSString*)to usingCallback:(void (^)(DCServiceContext*, ZhifuWanSM*)) callback{
+    [LService request:@"payProductOrder.action" with:@[purchaseuserid,opid,from,to] returns:[ZhifuWanSM class] whenDone:callback];
+}
+
++(void)storeAirplayInfoSM:(StoresAirPlayXinxiSM *)AirplaySM usingCallback:(void (^)(DCServiceContext *, ResultOfCreateAddress *))callback
+{
+	 [LService request:@"saveTic.action" with:@[AirplaySM] returns:[ResultOfCreateAddress class] whenDone:callback];
+}
+
++(void) serchAirPlayTicketWithFrom:(NSString*)from To:(NSString*)to dptcity:(NSString*)dptcity dstcity:(NSString*)dstcity starttime:(NSString*)starttime usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback
+{
+    [LService request:@"searchAirTicket" with:@[from,to,dptcity,dstcity,starttime] returns:[ResultOfCreateAddress class] whenDone:callback];
+}
+
++(void)baocunJIpiaoxinxiWith:(BaocunjiPiaoXinxiSM *)SM usingCallback:(void (^)(DCServiceContext *, ResultModelOfGetCodeSM *))callback
+{
+	[LService request:@"save.action" with:@[SM] returns:[ResultModelOfGetCodeSM class] whenDone:callback];
+}
+
+/*!
+ 获取历史乘机人
+ */
++(void)huoquLishiChenjiRenWith:(NSString *)SM usingCallback:(void (^)(DCServiceContext*, HuoqulishichengjirenResultSM*)) callback
+{
+	[LService request:@"list.action" with:@[SM] returns:[HuoqulishichengjirenResultSM class] whenDone:callback];
+}
+
++(void)createChengJiRenXinXiWithPsgName:(NSString *)psgName PsgType:(NSString*)psgType IDType:(NSString*)idType IDNo:(NSString*)idNo Createid:(NSString*)createid ContactPhone:(NSString*)contactPhone usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback
+{
+    [LService request:@"addCheckIn" with:@[psgName,psgType,idType,idNo,createid,contactPhone] returns:[ResultOfCreateAddress class] whenDone:callback];
+
+}
+
++(void)updateChengJiRenXinXiWithPsgName:(NSString *)psgName PsgType:(NSString*)psgType IDType:(NSString*)idType IDNo:(NSString*)idNo Createid:(NSString*)_id ContactPhone:(NSString*)contactPhone usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback
+{
+    
+    [LService request:@"updateCheckIn" with:@[psgName,psgType,idType,idNo,_id,contactPhone] returns:[ResultOfCreateAddress class] whenDone:callback];
+}
+
+/**
+ 删除历史乘机人
+ */
++(void)removeChenjiRenWithChengJiID:(NSString *)ID usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback
+{
+     [LService request:@"deleteCheckInCustomer" with:@[ID] returns:[ResultOfCreateAddress class] whenDone:callback];
+}
+/*!
+ 保存乘机人信息
+ */
++(void)storeChengjiRenInfoSM :(NSString*)createid withids:(NSString *)ids usingCallback:(void (^)(DCServiceContext*, ResultModelOfMyOrderSM*)) callback
+{
+	[LService request:@"submit.action" with:@[ids,createid] returns:[ResultOfCreateAddress class] whenDone:callback];
+}
+
+/**
+ 删除已提交乘机人
+ */
++ (void)removeChenjiRenWithOrderID:(NSString *)orderID ChengJiRenID:(NSString*)ID usingCallback:(void (^)(DCServiceContext*, ResultOfCreateAddress*)) callback{
+    [LService request:@"deletePassenger.action" with:@[orderID,ID] returns:[ResultOfCreateAddress class] whenDone:callback];
+}
+
+/**
+ 获取机票城市信息
+ */
++ (void)getCityForAirusingCallback:(void (^)(DCServiceContext*, GetCityListForAirplan*)) callback{
+    [LService request:@"huoQuJiPiaoChengShi" with:@[] returns:[GetCityListForAirplan class] whenDone:callback];
+}
+
+/**
+ 获取机场信息信息
+ */
++ (void)getAirPortListusingCallback:(void (^)(DCServiceContext*, getAirPortListSM*)) callback
+{
+    [LService request:@"huoQujiChangXinXi" with:@[] returns:[getAirPortListSM class] whenDone:callback];
+}
+
+/**
+ 获取航空公司信息
+ */
++ (void)getAirLineListusingCallback:(void (^)(DCServiceContext*, getAirLineListSM*)) callback{
+    [LService request:@"huoQuhangKongGongSiXinXi" with:@[] returns:[getAirLineListSM class] whenDone:callback];
+}
+
+/*!
+ 获取储蓄卡余额
+ */
++(void)huoquChuxuKayueWith:(NSString *)usrid usingCallback:(void (^)(DCServiceContext*, ResultOfCreateservice*)) callback
+{
+	[LService request:@"obtainValueCard.action" with:@[usrid] returns:[ResultOfCreateservice class] whenDone:callback];
+}
+
+/*!
+ 支付
+ */
++(void)zhiFuWithFromID:(NSString *)fromID withToID:(NSString *)toID withorderuserid:(NSString *)orderuserid withSaveID:(NSString *)saveID Paypassword:(NSString *)paypassword usingCallback:(void (^)(DCServiceContext *, ResultModelOfGetCodeSM *))callback{
+	[LService request:@"payAllTicketOrder.action" with:@[fromID,toID,orderuserid,saveID,paypassword] returns:[ResultModelOfGetCodeSM class] whenDone:callback];
+}
+
+
+//增加订餐信息
++(void)orderfoodinfo:(orderfoodinfo *)orderjson usingCallback:(void (^)(DCServiceContext *, orderfoodPress *))callback
+{
+    [LService request:@"addFoodInfo.action" with:@[orderjson] returns:[orderfoodPress class] whenDone:callback];
+}
+
+//点餐
++(void)orderfood:(orderfoodeprice *)orderjson usingCallback:(void (^)(DCServiceContext *, PriceResult *))callback
+{
+    [LService request:@"doOrderFood.action" with:@[orderjson] returns:[PriceResult class] whenDone:callback];
+}
+
+//获取酒店列表
+//+(void)orderfood:(orderfoodeprice *)orderjson usingCallback:(void (^)(DCServiceContext *, PriceResult *))callback
+//{
+//    [LService request:@"doOrderFood.action" with:@[orderjson] returns:[PriceResult class] whenDone:callback];
+//}
+
+
+//1.1.1	获取省列表
++(void)getProvinceListUsingCallback:(void (^)(DCServiceContext *, ShengLiebiaoSM *))callback{
+    [LService request:@"getProvinceList.action" with:@[] returns:[ShengLiebiaoSM class] whenDone:callback];
+}
+
+//1.1.2	查询城市列表
++(void)getCityListByProvinceIdWithProvinceId:(NSString *)provinceId UsingCallback:(void (^)(DCServiceContext *, ChengshiLiebiaoSM *))callback{
+    [LService request:@"getCityListByProvinceId.action" with:@[provinceId] returns:[ChengshiLiebiaoSM class] whenDone:callback];
+}
+
+//1.1.3	查询行政区列表
++(void)getCountyListByCityIdWithCityId:(NSString *)cityId UsingCallback:(void (^)(DCServiceContext *, XingzhengquLiebiaoSM *))callback{
+    [LService request:@"getCountyListByCityId.action" with:@[cityId] returns:[XingzhengquLiebiaoSM class] whenDone:callback];
+}
+
+//1.1.4	根据名称查询区划信息
++(void)getDivisionInfoByNameWithDivisionName:(NSString *)divisionName UsingCallback:(void (^)(DCServiceContext *, QuhuaXinxiSM *))callback{
+    [LService request:@"getDivisionInfoByName.action" with:@[divisionName] returns:[QuhuaXinxiSM class] whenDone:callback];
+}
+
+//1.1.5	根据ID查询区划信息
++(void)getDivisionInfoByNameWithDivisionId:(NSString *)divisionId UsingCallback:(void (^)(DCServiceContext *, QuhuaXinxiLiebiaoSM *))callback{
+    [LService request:@"getDivisionInfoByName.action" with:@[divisionId] returns:[QuhuaXinxiLiebiaoSM class] whenDone:callback];
+}
+
+//1.1.1	提交酒店订单SubmitHotelOrder
++(void)getHotelListWithSubmitHotelOrder:(SubmitHotelOrderSM *)submitHotelOrderSM UsingCallback:(void (^)(DCServiceContext *, ResultSubmitHotelOrderSM *))callback{
+    [LService request:@"getHotelList.action" with:@[submitHotelOrderSM] returns:[ResultSubmitHotelOrderSM class] whenDone:callback];
+}
+
++ (void)getCreateFeedbackWithVersionPlatform:(NSString *)versionPlatform usingCallback:(void (^)(DCServiceContext *, ResultModelOfUpdateVersionSM *))callback{
+    [LService request:@"updateVersion.action" with:@[versionPlatform] returns:[ResultModelOfUpdateVersionSM class] whenDone:callback];
+}
+
+/*!
+ 2.1.1 获取酒店列表
+ */
++ (void)getHotelListWithListSM:(HotelListSM *)listsm usingCallback:(void(^)(DCServiceContext*,ResultModelOfUpdateVersionSM*))callback{
+    [LService request:@"getHotelList.action" with:@[listsm] returns:[ResultModelOfUpdateVersionSM class] whenDone:callback];
+}
+
++ (void)getMyMsgWithID:(NSString *)_id usingCallback:(void(^)(DCServiceContext*,MyMsgSM*))callback{
+    [LService request:@"getMyMsg.action" with:@[_id] returns:[MyMsgSM class] whenDone:callback];
+}
+
++ (void)getUpdateUserAttrWithName:(NSString *)name ID:(NSString *)_id Phone:(NSString *)phone shenfenzhengID:(NSString *)classID Gender:(int)gender usingCallback:(void(^)(DCServiceContext*,UpdateUserAttrSM*))callback{
+    [LService request:@"updateUserAttr.action" with:@[name,_id,phone,classID,[NSNumber numberWithInt:gender]] returns:[UpdateUserAttrSM class] whenDone:callback];
+}
+
++ (void)getShoujiShanghuaUsingCallback:(void(^)(DCServiceContext*,ShoujiShanghuaSM*))callback{
+    [LService request:@"shoujiShanghua.action" with:@[] returns:[ShoujiShanghuaSM class] whenDone:callback];
+}
+
++ (void)getCheckInstructUpdataTime:(NSString *)updateTime UsingCallback:(void(^)(DCServiceContext*,CheckInstructUpdSM*))callback{
+     [LService request:@"instructUpd.updateTime" with:@[updateTime] returns:[CheckInstructUpdSM class] whenDone:callback];
+}
+
+/*!
+ 1.1.11	获取手机验证码
+ */
++ (void)getEditGetCodeWithID:(NSString *)_id usingCallback:(void(^)(DCServiceContext*,EditGetCodeSM*))callback{
+    [LService request:@"editGetCode.action" with:@[_id] returns:[EditGetCodeSM class] whenDone:callback];
+}
+
+/*!
+ 1.1.12	设置存储卡支付密码
+ */
++ (void)getSetPayPasswordWithID:(NSString *)_id Code:(NSString *)code Paypassword:(NSString *)paypassword usingCallback:(void(^)(DCServiceContext*,SetPayPasswordSM*))callback{
+    [LService request:@"setPayPassword.action" with:@[_id,code,paypassword] returns:[SetPayPasswordSM class] whenDone:callback];
+}
+
++ (void)getReSetPayPasswordWithID:(NSString *)_id Code:(NSString *)code Paypassword:(NSString *)paypassword Oldpaypassword:(NSString *)oldpaypassword usingCallback:(void(^)(DCServiceContext*,SetPayPasswordSM*))callback{
+    [LService request:@"reSetPayPassword.action" with:@[_id,code,paypassword,oldpaypassword] returns:[SetPayPasswordSM class] whenDone:callback];
+}
+
++ (void)getReTihuanfuWithFrom:(NSString *)from To:(NSString *)to Type:(int)type usingCallback:(void(^)(DCServiceContext*,ResultMode*))callback{
+    [LService request:@"heartbeatCallcenterHx.action" with:@[from,to,[NSNumber numberWithInt:type]] returns:[ResultMode class] whenDone:callback];
+}
+
+@end

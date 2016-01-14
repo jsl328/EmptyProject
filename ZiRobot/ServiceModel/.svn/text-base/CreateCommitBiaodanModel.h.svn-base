@@ -1,0 +1,21 @@
+//
+//  CreateCommitBiaodanModel.h
+//  ZiRobot
+//
+//  Created by 阿布都沙拉木吾斯曼 on 15/4/30.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface CreateCommitBiaodanModel : NSObject
+@property (nonatomic,strong) NSString *phone;
+@property (nonatomic,strong) NSString *addres;
+@property (nonatomic,strong) NSString *flowid;
+@property (nonatomic,strong) NSString *flowname;
+@property (nonatomic,strong) NSString *createid;
+@property (nonatomic,strong) NSString *createname;
+@property (nonatomic,strong) NSArray *applyexts;
+@property (nonatomic, strong) NSString *from;
+@property (nonatomic, strong) NSString *to;
+@end

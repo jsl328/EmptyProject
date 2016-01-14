@@ -1,0 +1,32 @@
+//
+//  CheckInstructUpdSM.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/6/13.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@interface CheckInstructUpdSM : NSObject<IAnnotatable>
+@property (nonatomic, assign) int status;
+@property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong) NSString *data1;
+@property (nonatomic, strong) NSString *msg;
+@end
+
+@interface CheckInstructUpdDataSM : NSObject<IAnnotatable>
+@property (nonatomic, strong) NSString *instUpdId;
+@property (nonatomic, assign) int updContent;
+@property (nonatomic, assign) int updType;
+@property (nonatomic, strong) NSString *updId;
+@property (nonatomic, strong) NSString *code;
+@property (nonatomic, strong) NSString *content;
+@property (nonatomic, strong) NSString *memo;
+@property (nonatomic, strong) NSString *icons;
+@property (nonatomic, assign) int sort;
+@property (nonatomic, strong) NSString *updateTime;
+@property (nonatomic, strong) NSString *ext1;
+@property (nonatomic, strong) NSString *ext2;
+@property (nonatomic, strong) NSString *ext3;
+@end

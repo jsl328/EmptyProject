@@ -1,0 +1,21 @@
+//
+//  ApplicationFormSM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "ApplicationFormSM.h"
+#import "ApplicationInfoSM.h"
+#import "SubApplicationFormSM.h"
+@implementation ApplicationFormSM
+
+-(void) provideAnnotations: (AnnotationProvider*) ap
+{
+	DCField(ap, @"status", @"status");
+	DCField(ap, @"msg", @"msg");
+	DCField(ap, @"type", @"type");
+	DCListField(ap, @"data2", @"data", [ApplicationInfoSM class]);
+}
+@end

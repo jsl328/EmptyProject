@@ -1,0 +1,18 @@
+//
+//  KaYueSM.h
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-5-16.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "SingleOrCompanyYueSM.h"
+#import "IAnnotatable.h"
+@interface KaYueSM : NSObject<IAnnotatable>
+@property (nonatomic)int status;
+@property (nonatomic,assign)int type;
+@property (nonatomic,strong)NSString *title;
+@property (nonatomic,strong)NSString *msg;
+@property (nonatomic,strong)NSArray *data;
+@end

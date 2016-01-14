@@ -1,0 +1,157 @@
+//
+//  ResultModelOfDetailSM.h
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/4/21.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "IAnnotatable.h"
+@class ResultModelOfData1SM;
+@interface ResultModelOfDetailSM : NSObject<IAnnotatable>
+
+@property (nonatomic) int status;
+@property (nonatomic, retain) NSString *type;
+@property (nonatomic, retain) ResultModelOfData1SM *data;
+@property (nonatomic, retain) NSArray *data1;
+@property (nonatomic, strong) NSArray *foodS;
+@end
+
+@class ResultModelOfApplySM;
+@interface ResultModelOfDataSM : NSObject<IAnnotatable>
+
+@property (nonatomic, retain) ResultModelOfApplySM *apply;
+@property (nonatomic, retain) NSArray *applyexts;
+@property (nonatomic, retain) NSArray *applyrecords;
+
+@end
+
+@interface ResultModelOfApplySM : NSObject<IAnnotatable>
+
+@property (nonatomic, retain) NSString *_id;
+@property (nonatomic, retain) NSString *jobno;
+@property (nonatomic, retain) NSString *createtime;
+@property (nonatomic, retain) NSString *createid;
+@property (nonatomic) int status;
+@property (nonatomic, retain) NSString *flowname;
+@property (nonatomic, retain) NSString *deleteflag;
+@property (nonatomic, retain) NSString *dealid;
+@property (nonatomic, retain) NSString *dealname;
+@property (nonatomic, retain) NSString *statusValue;
+
+@end
+
+@interface ResultModelOfApplyextsSM : NSObject<IAnnotatable>
+
+@property (nonatomic, retain) NSString *_id;
+@property (nonatomic, retain) NSString *applyid;
+@property (nonatomic) int sort;
+@property (nonatomic, retain) NSString *chname;
+@property (nonatomic) int type;
+@property (nonatomic, retain) NSString *content;
+
+@end
+
+@interface ResultModelOfApplyrecordsSM : NSObject<IAnnotatable>
+
+@property (nonatomic, retain) NSString *_id;
+@property (nonatomic, retain) NSString *applyid;
+@property (nonatomic, retain) NSString *dealid;
+@property (nonatomic, retain) NSString *dealtime;
+@property (nonatomic) int status;
+@property (nonatomic, retain) NSString *passid;
+@property (nonatomic, retain) NSString *content;
+@property (nonatomic, retain) NSString *dealname;
+@property (nonatomic, retain) NSString *passname;
+
+@end
+@class ResultModelOfProductSM;
+@class ResultModelOfOrderSM;
+@class ResultModelOfT_OrderSM;
+@interface ResultModelOfData1SM : NSObject<IAnnotatable>
+
+@property (nonatomic, strong) NSString *starttime;
+@property (nonatomic, strong) NSString *endtime;
+@property (nonatomic, strong) NSString *serchname;
+@property (nonatomic, strong) NSString *_id;
+@property (nonatomic, strong) NSString *orderid;
+@property (nonatomic, assign) int ordertype;
+@property (nonatomic, assign) int status;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *createtime;
+@property (nonatomic, strong) NSString *orderproperty;
+@property (nonatomic, strong) NSString *orderpropertytwo;
+@property (nonatomic, strong) NSString *orderuserid;
+@property (nonatomic, strong) NSString *ordercreateid;
+@property (nonatomic, assign) int deleteflag;
+@property (nonatomic, strong) NSString *statusValue;
+@property (nonatomic, assign) float orderprice;
+@property (nonatomic, strong) NSString *from;
+@property (nonatomic, strong) NSString *to;
+@property (nonatomic, strong) NSString *linkphone;
+@property (nonatomic, strong) NSString *linkaddress;
+@property (nonatomic, strong) NSString *linkpersonname;
+@property (nonatomic, strong) NSString *passengertimes;
+@property (nonatomic, strong) NSString *departureTime;
+@property (nonatomic, strong) NSString *orderno;
+@property (nonatomic, assign) int orderCount;
+@property (nonatomic, strong) NSString *paypassword;
+
+@property (nonatomic, retain) ResultModelOfProductSM *product;
+@property (nonatomic, retain) ResultModelOfOrderSM *order;
+@property (nonatomic, retain) ResultModelOfT_OrderSM *t_order;
+
+@end
+
+@interface ResultModelOfProductSM : NSObject<IAnnotatable>
+
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *iconurl;
+@property (nonatomic) float price;
+@property (nonatomic, retain) NSString *unitname;
+@property (nonatomic, retain) NSString *currency;
+@property (nonatomic, retain) NSString *createtime;
+@property (nonatomic, retain) NSString *updatetime;
+
+@end
+
+@interface ResultModelOfOrderSM : NSObject<IAnnotatable>
+
+@property (nonatomic, retain) NSString *orderid;
+@property (nonatomic, retain) NSString *orderno;
+@property (nonatomic, retain) NSString *orderstatus;
+@property (nonatomic, retain) NSString *purchaseuserid;
+@property (nonatomic, retain) NSString *receivename;
+@property (nonatomic, retain) NSString *receivemobile;
+@property (nonatomic, retain) NSString *receiveaddress;
+@property (nonatomic, retain) NSString *orderevaluate;
+@property (nonatomic, retain) NSString *createtime;
+@property (nonatomic, retain) NSString *updatetime;
+@property (nonatomic, retain) NSString *allorderid;
+@end
+
+@interface ResultModelOfT_OrderSM : NSObject<IAnnotatable>
+@property (nonatomic, retain) NSString *opid;
+@property (nonatomic, retain) NSString *productid;
+@property (nonatomic, retain) NSString *orderno;
+@property (nonatomic, retain) NSString *productname;
+@property (nonatomic, retain) NSString *iconurl;
+@property (nonatomic) int price;
+@property (nonatomic) int productcount;
+@property (nonatomic) int summoney;
+@property (nonatomic) int status;
+@property (nonatomic, retain) NSString *comment;
+@property (nonatomic, retain) NSString *property;
+@property (nonatomic, retain) NSString *createtime;
+@property (nonatomic, retain) NSString *statusValue;
+@property (nonatomic, retain) NSString *allorderid;
+//allorderid
+@end
+
+@interface ResultModelOfFoodData1SM : NSObject<IAnnotatable>
+@property (nonatomic, strong) NSString *foodname;
+@property (nonatomic, assign) float foodprice;
+@property (nonatomic, assign) int foodordernum;
+//allorderid
+@end

@@ -1,0 +1,13 @@
+//
+//  SearchTicketModel.m
+//  ZiRobot
+//
+//  Created by 阿布都沙拉木吾斯曼 on 15/5/13.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "SearchTicketModel.h"
+
+@implementation SearchTicketModel
+
+@end

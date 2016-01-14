@@ -1,0 +1,21 @@
+//
+//  CheckInstructUpdSM.m
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/6/13.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "CheckInstructUpdSM.h"
+
+@implementation CheckInstructUpdSM
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"data", @"data", [CheckInstructUpdDataSM class]);
+}
+@end
+
+@implementation CheckInstructUpdDataSM
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+   
+}
+@end

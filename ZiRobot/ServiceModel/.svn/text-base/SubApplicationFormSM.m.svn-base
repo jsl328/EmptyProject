@@ -1,0 +1,17 @@
+//
+//  SubApplicationFormSM.m
+//  ZiRobot
+//
+//  Created by jiangshilin on 15-4-20.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "SubApplicationFormSM.h"
+
+@implementation SubApplicationFormSM
+
+-(void)provideAnnotations:(AnnotationProvider *)ap
+{
+	DCField(ap, @"_id", @"id");
+}
+@end

@@ -1,0 +1,25 @@
+//
+//  GuahaoSM.m
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/5/8.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "GuahaoSM.h"
+@class GuahaoDataSM;
+@implementation GuahaoSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"data", @"data", [GuahaoDataSM class]);
+}
+
+@end
+
+@implementation GuahaoDataSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    
+}
+
+@end

@@ -1,0 +1,25 @@
+//
+//  MyMsgSM.m
+//  ZiRobot
+//
+//  Created by fuyonghua on 15/6/12.
+//  Copyright (c) 2015年 fuyonghua. All rights reserved.
+//
+
+#import "MyMsgSM.h"
+@class MyMsgDataSM;
+@implementation MyMsgSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCListField(ap, @"data", @"data", [MyMsgDataSM class]);
+}
+
+@end
+
+@implementation MyMsgDataSM
+
+- (void)provideAnnotations:(AnnotationProvider *)ap{
+    DCField(ap, @"_id", @"id");
+}
+
+@end
