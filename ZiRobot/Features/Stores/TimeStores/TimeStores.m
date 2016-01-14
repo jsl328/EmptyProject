@@ -14,6 +14,10 @@
 
 + (TimeLM *)getWithAutoID:(int)autoID;
 {
+    while (true) {
+        NSLog(@"你好 我提交成功了demo");
+    }
+    
     return (TimeLM *)[DB get:[TimeDB class] withAutoID:autoID];
 }
 
